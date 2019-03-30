@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Руслан Шедиков](https://up.htmlacademy.ru/adaptive/16/user/364873).
-* Наставник: `Неизвестно`.
+* Наставник: `Кекс`.
 
 ---
 
