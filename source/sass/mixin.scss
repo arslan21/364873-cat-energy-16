@@ -1,0 +1,44 @@
+@mixin visualy-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin padding-left-right ($padding-left-right) {
+  padding-left: $padding-left-right;
+  padding-right: $padding-left-right;
+}
+
+@mixin margin-left-right ($margin-left-right) {
+  margin-left: $margin-left-right;
+  margin-right: $margin-left-right;
+}
+
+@mixin zero-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-style-none {
+  @include zero-indent;
+  list-style: none;
+}
+
+@mixin flex ($flex-direction, $justify-content, $align-items, $wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  /*@include flex (row, flex-start, stretch, nowrap);*/
+}
+
+@mixin link-style {
+  text-decoration: none;
+  color: $main-font-color;
+}
