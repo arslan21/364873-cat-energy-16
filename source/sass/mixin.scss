@@ -41,4 +41,18 @@
 @mixin link-style {
   text-decoration: none;
   color: $main-font-color;
+  cursor: pointer;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font-color-size($font-color, $text-transform, $font-size, $font-weight, $line-height) {
+  color: $font-color;
+  text-transform: $text-transform;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height
 }
