@@ -11,6 +11,13 @@
 
 .nav__link {
   @include link-style();
+  @include flex(column, center, center, wrap);
+  width: 100%;
+  min-height: 65px;
+}
+
+.nav__link-text {
+  @include padding-left-right($main-padding-mobile);
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
