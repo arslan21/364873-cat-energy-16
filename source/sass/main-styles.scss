@@ -16,3 +16,7 @@
 *::after {
   box-sizing: inherit;
 }
+
+.visualy-hidden {
+  @include visualy-hidden;
+}
