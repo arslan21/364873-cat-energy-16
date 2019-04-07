@@ -1,22 +1,22 @@
 .advantages {
   @include flex(column, flex-start, flex-start, nowrap);
-  width: 100%;
-  margin-top: 0px;
   @include padding-left-right($main-padding-mobile);
+  width: 100%;
+  margin-top: 0;
   background-color: inherit;
 }
 
 .advantages__title {
-  font-family: $oswald;
   @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  font-family: $oswald;
   margin-bottom: 0;
 }
 
 .advantages__list {
   @include list-style-none;
+  @include flex(column, flex-start, flex-start, nowrap);
   background-color: inherit;
   width: 100%;
-  @include flex(column, flex-start, flex-start, nowrap);
 }
 
 .advantages__item {
@@ -33,15 +33,19 @@
   background-repeat: no-repeat;
   background-size: 60px 60px;
   background-position: 50% 50%;
+
   &--leaf {
     background-image: url("../../img/advantage-leaf@1x.png");
   }
+
   &--powder {
     background-image: url("../../img/advantage-powder@1x.png");
   }
+
   &--dining {
     background-image: url("../../img/advantage-dining@1x.png");
   }
+
   &--clock {
     background-image: url("../../img/advantage-clock@1x.png");
   }
@@ -50,6 +54,7 @@
 .advantages__description {
   width: auto;
   font-family: $arialmt;
+
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   word-wrap: break-word;
 }
