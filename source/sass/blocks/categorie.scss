@@ -46,16 +46,24 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8a608666c50dd9d929c4be453f5db805b0726a8c
 .categorie__name {
   @include font-color-size($title-font-color, uppercase, $card-title-size, $weight-regular, 37px);
   word-wrap: break-word;
 }
 
 .categorie__description {
+<<<<<<< HEAD
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   font-family: $arialmt;
 
+=======
+  font-family: $arialmt;
+  @include font-color-size($main-font-color, none, 14px, $weight-regular, 18px);
+>>>>>>> 8a608666c50dd9d929c4be453f5db805b0726a8c
   &::after {
     content: "";
     display: block;
@@ -68,12 +76,20 @@
 }
 
 .categorie__link {
+<<<<<<< HEAD
   @include link-style;
   @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 16px);
   display: block;
   max-width: calc(100% - 14px - 24px - 36px);
   word-wrap: break-word;
 
+=======
+  display: block;
+  max-width: calc(100% - 14px - 24px - 36px);
+  @include link-style;
+  @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 16px);
+  word-wrap: break-word;
+>>>>>>> 8a608666c50dd9d929c4be453f5db805b0726a8c
   &::after {
     content: "";
     display: block;
