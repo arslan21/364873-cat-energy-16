@@ -1,8 +1,8 @@
 .categorie {
   @include flex(column, flex-start, center, nowrap);
-  width: 100%;
-  margin-top: 0px;
   @include padding-left-right($main-padding-mobile);
+  width: 100%;
+  margin-top: 0;
   background-color: inherit;
 }
 
@@ -46,14 +46,16 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
 .categorie__name {
   @include font-color-size($title-font-color, uppercase, $card-title-size, $weight-regular, 37px);
   word-wrap: break-word;
 }
 
 .categorie__description {
-  font-family: $arialmt;
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
+  font-family: $arialmt;
+
   &::after {
     content: "";
     display: block;
@@ -66,11 +68,12 @@
 }
 
 .categorie__link {
-  display: block;
-  max-width: calc(100% - 14px - 24px - 36px);
   @include link-style;
   @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 16px);
+  display: block;
+  max-width: calc(100% - 14px - 24px - 36px);
   word-wrap: break-word;
+
   &::after {
     content: "";
     display: block;

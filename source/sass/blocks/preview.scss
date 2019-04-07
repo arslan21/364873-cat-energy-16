@@ -3,7 +3,6 @@
   // max-height: 480px;
   width: 100%;
   background-color: inherit;
-
 }
 
 .preview__background {
@@ -28,25 +27,24 @@
 }
 
 .preview__title {
-  font-family: $oswald;
   @include font-color-size($contrast-font-color, none, $page-title-size, $weight-regular, 36px);
+  font-family: $oswald;
   text-align: center;
 }
 
 .preview__slogan {
   @include font-color-size($contrast-font-color, uppercase, 14px, $weight-regular, 14px);
   text-align: center;
-
 }
 
 .preview__image {
-  width: 100%-2*$main-padding-mobile;
-  width: 280px;
+  max-width: 280px;
+  // width: 100% - 2*$main-padding-mobile;
   // height: 58.33vh;
   // max-height: 270px;
 }
 
 .preview__button {
-  padding-bottom: 0px;
+  padding-bottom: 0;
   // margin-top: 50px;
 }
