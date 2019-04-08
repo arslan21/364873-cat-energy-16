@@ -1,0 +1,70 @@
+.contacts {
+  @include flex(row, flex-start, baseline, wrap);
+  background-color: $add-background-color;
+  padding-top: 30px;
+  // @include $padding-left-right($main-padding-mobile);
+
+  &--index {
+    background-color: $background-color;
+  }
+}
+
+.contacts__title {
+  @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
+  @include flex(row, flex-start, center, wrap);
+  font-family: $oswald;
+  // min-width: 123px;
+  flex-basis: 123px;
+  margin-top: 0;
+  // width: 35%;
+  margin-left: $main-padding-mobile;
+
+  // &:first-child {
+  // }
+}
+
+.contacts__address {
+  @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 20px);
+  font-family: $arialmt;
+  font-style: normal;
+  // min-width: 123px;
+  flex-basis: 123px;
+  flex-grow: 1;
+  margin-left: 18px;
+  margin-right: $main-padding-mobile;
+  // width: 35%;
+}
+
+.contacts__map-block {
+  width: 100%;
+  height: 362px;
+  overflow: hidden;
+  position: relative;
+  // text-align: center;
+}
+
+.contacts__map {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.contacts__button {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 0;
+  background: none;
+  width: 55px;
+  height: 53px;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__map-pin {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
