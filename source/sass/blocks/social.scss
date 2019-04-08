@@ -1,0 +1,26 @@
+.social {
+  @include list-style-none;
+  @include flex(row, center, center, wrap);
+  // width: auto;
+}
+
+.social__item {
+  margin-right: 40px;
+  width: 22px;
+  height: 22px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  @include size(100%, 100%);
+  @include flex(row, center, center, wrap);
+  overflow: visible;
+}
+
+.social__link-image {
+  @include size(100%, 100%);
+  background-color: inherit;
+}
