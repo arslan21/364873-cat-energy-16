@@ -1,0 +1,59 @@
+.card {
+  @include flex(row, flex-start, center, wrap);
+  @include padding-left-right($main-padding-mobile);
+  width: 320px;
+  min-height: 210px;
+}
+
+.card__image {
+  flex-basis: 140px;
+  height: 144px;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.card__title {
+  @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
+  font-family: $oswald;
+
+  &--main,
+  &--other {
+    text-align: left;
+  }
+
+  &--main span {
+    display: block;
+  }
+
+  &--plus {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.card__slogan {
+  @include font-color-size($main-font-color, none, $table-font-size, $weight-regular, 16px);
+  font-family: $arialmt;
+  width: 100%;
+  text-align: center;
+}
+
+.card__table {
+  height: auto;
+
+  &--main {
+    margin-left: auto;
+  }
+  // &--other {
+  // }
+}
+
+.card__add-icon {
+  @include size(30px, 30px);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $background-color;
+  border: 0;
+  // margin: 0;
+  padding: 0;
+}

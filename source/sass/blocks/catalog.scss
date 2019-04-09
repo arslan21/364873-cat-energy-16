@@ -1,0 +1,67 @@
+.catalog {
+  @include flex(column, flex-start, center, nowrap);
+  width: 100%;
+  height: auto;
+  background-color: $background-color
+  // @include padding-left-right($main-padding-mobile);
+}
+
+.catalog__title {
+  @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  @include margin-left-right($main-padding-mobile);
+  font-family: $oswald;
+  // @include visualy-hidden;
+  align-self: flex-start;
+}
+
+.catalog__part {
+  @include flex(column, flex-start, center, nowrap);
+  width: 100%;
+  height: auto;
+  background-color: inherit;
+}
+
+.catalog__part-title {
+  @include font-color-size($title-font-color, none, $card-title-size, $weight-regular, 24px);
+  @include padding-left-right($main-padding-mobile);
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: $oswald;
+  align-self: flex-start;
+
+  &--other::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 53px;
+    height: 3px;
+    top: 50%;
+    right: 0;
+    background-color: $main-color;
+  }
+}
+
+.catalog__list {
+  @include list-style-none;
+  @include flex(row, flex-start, flex-start, wrap);
+  width: 100%;
+  height: auto;
+}
+
+.catalog__bonus {
+  @include margin-left-right($main-padding-mobile);
+  @include flex(column, space-around, center, nowrap);
+  @include padding-left-right(60px);
+  width: 280px;
+  height: 289px;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catalog__bonus-slogan {
+  @include font-color-size($contrast-font-color, none, 16px, $weight-regular, 20px);
+  font-family: $arialmt;
+  text-align: center;
+}
