@@ -5,9 +5,16 @@
   @include link-style;
   @include font-color-size($contrast-font-color, uppercase, $button-font-size, $weight-regular, 20px);
   background-color: $main-color;
+  border: 0;
+  padding: 0;
 
   &--preview {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  &--card,
+  &--card-plus {
+    @include margin-left-right(0);
   }
 }
