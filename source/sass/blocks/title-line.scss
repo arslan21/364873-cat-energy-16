@@ -1,0 +1,20 @@
+.title-line {
+  @include font-color-size($title-font-color, none, $card-title-size, $weight-regular, 24px);
+  @include padding-left-right($main-padding-mobile);
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: $oswald;
+  align-self: flex-start;
+
+  &--other::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 53px;
+    height: 3px;
+    top: 50%;
+    right: 0;
+    background-color: $main-color;
+  }
+}
