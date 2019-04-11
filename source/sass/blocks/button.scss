@@ -17,4 +17,8 @@
   &--card-plus {
     @include margin-left-right(0);
   }
+
+  &--form {
+    width: 280px;
+  }
 }
