@@ -38,39 +38,39 @@
 
         <div class="form__registration">
           <h2 class="form__block-title visualy-hidden">Регистрационные данные</h2>
-          <label for="name" class="form__label">Имя:<sup>*</sup><input type="text" class="form__input" id="name" name="name" placeholder="Барсик" required></label>
-          <label for="weight" class="form__label">Вес:<sup>*</sup><input type="text" class="form__input" id="weight" name="weight" placeholder="7" required></label>
-          <label for="age" class="form__label">Возраст:<input type="text" class="form__input" id="age" name="age" placeholder="7"></label>
+          <label for="name" class="form__label form__label--text"><p>Имя:<sup>*</sup></p><input type="text" class="form__input form__input--text" id="name" name="name" placeholder="Барсик" size="5" required></label>
+          <label for="weight" class="form__label form__label--text"><p>Вес:<sup>*</sup></p><input type="text" class="form__input form__input--text" id="weight" name="weight" placeholder="7" size="2" required></label>
+          <label for="age" class="form__label form__label--text"><p>Возраст:</p><input type="text" class="form__input form__input--text" id="age" name="age" placeholder="7" size="2"></label>
         </div>
 
         <div class="form__type">
           <h2 class="form__block-title visualy-hidden">Тип программы</h2>
-          <input type="radio" class="form__radio" id="weight-down" name="programm-type" value="weight-down"><label for="weight-down" class="form__lbael">Похудение</label>
-          <input type="radio" class="form__radio" id="weight-up" name="programm-type" value="weight-up">Набор массы<label for="weight-up" class="form__lbael"></label>
-          <input type="radio" class="form__radio" id="weight-advice" name="programm-type" value="weight-advice">Не знаю (Нужен ваш совет)<label for="weight-advice" class="form__lbael"></label>
+          <label for="weight-down" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-down" name="programm-type" value="weight-down">Похудение</label>
+          <label for="weight-up" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-up" name="programm-type" value="weight-up">Набор массы</label>
+          <label for="weight-advice" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-advice" name="programm-type" value="weight-advice">Не знаю (Нужен ваш совет)</label>
         </div>
 
-        <div class="programm__contacts">
-          <h2 class="form__block-title">Контактные данные (владельца кота)</h2>
-          <label for="email" class="form__label">e-mail:<sup>*</sup><input type="text" class="form__input" id="email" name="email" placeholder="kuklachev@gmail.com" required></label>
-          <label for="phone" class="form__label">Телефон:<sup>*</sup><input type="number" class="form__input" id="phone" name="phone" placeholder="8 (960) 900-60-90" required></label>
+        <div class="form__contacts">
+          <h2 class="form__block-title title-line">Контактные данные (владельца кота)</h2>
+          <label for="email" class="form__label form__label--text form__label--email"><p>e-mail:<sup>*</sup></p><input type="text" class="form__input form__input--text" id="email" name="email" placeholder="kuklachev@gmail.com" size="11" required></label>
+          <label for="phone" class="form__label form__label--text form__label--phone"><p>Телефон:<sup>*</sup></p><input type="text" class="form__input form__input--text" id="phone" name="phone" placeholder="8 (960) 900-60-90" size="11" required></label>
         </div>
 
-        <div class="programm__comment">
-          <h2 class="form__block-title">Комментарий</h2>
-          <label for="comment" class="form__label">Комментарий</label>
-          <input type="text" class="form__input--comment" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота">
+        <div class="form__comment">
+          <h2 class="form__block-title title-line">Комментарий</h2>
+          <!-- <label for="comment" class="form__label--text">Комментарий</label> -->
+          <textarea rows="5" class="form__input--comment" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
 
-        <div class="programm__additional">
-          <h2 class="form__block-title">Дополнительно</h2>
-          <label for="sugar" class="form__label"><input type="checkbox" class="form__checkbox" id="sugar" name="programm-additional" value="sugar">Сахорозаменитель</label>
-          <label for="water" class="form__label"><input type="checkbox" class="form__checkbox" id="water" name="programm-additional" value="water">Вода</label>
-          <label for="milk" class="form__label"><input type="checkbox" class="form__checkbox" id="milk" name="programm-additional" value="milk">Молоко</label>
-          <label for="vitamin" class="form__label"><input type="checkbox" class="form__checkbox" id="vitamin" name="programm-additional" value="vitamin">Витамины</label>
+        <div class="form__additional">
+          <h2 class="form__block-title title-line">Дополнительно</h2>
+          <label for="sugar" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="sugar" name="programm-additional" value="sugar"><p>Сахорозаменитель</p></label>
+          <label for="water" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="water" name="programm-additional" value="water"><p>Вода</p></label>
+          <label for="milk" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="milk" name="programm-additional" value="milk"><p>Молоко</p></label>
+          <label for="vitamin" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="vitamin" name="programm-additional" value="vitamin"><p>Витамины</p></label>
         </div>
 
-        <button type="submit" name="button" class="form__button button--form">Отправить заявку</button>
+        <button type="submit" name="button" class="form__button button button--form">Отправить заявку</button>
       </form>
 
       <p class="programm__req">* — Обязательные поля</p>

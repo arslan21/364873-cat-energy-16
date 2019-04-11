@@ -1,0 +1,25 @@
+.programm {
+  @include flex(column, flex-start, center, nowrap);
+  width: 100%;
+}
+
+.programm-title {
+  @include padding-left-right($main-padding-mobile);
+  @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  font-family: $oswald;
+}
+
+.programm__slogan {
+  @include padding-left-right($main-padding-mobile);
+  @include font-color-size($title-font-color, uppercase, $main-font-size, $weight-regular, 18px);
+}
+//
+// .programm__form {
+//
+// }
+
+.programm__req {
+  @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 16px);
+  font-family: $arialmt;
+  text-align: center;
+}
