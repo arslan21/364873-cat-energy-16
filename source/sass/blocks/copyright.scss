@@ -1,0 +1,26 @@
+.copyright {
+  // @include flex(row, space-between, baseline, row);
+}
+
+.copyright__list {
+  @include list-style-none;
+  @include flex(row, space-between, center, wrap);
+  width: 100%;
+}
+
+.copyright__item {
+  @include flex(row, center, center, wrap);
+  width: auto;
+}
+
+.copyright__text {
+  @include font-color-size($main-font-color, none, 16px, $weight-regular, 16px);
+  word-wrap: break-word;
+  font-family: $arialmt;
+}
+
+.copyright__link {
+  @include flex(row, center, center, nowrap);
+  width: 34px;
+  height: 34px;
+}

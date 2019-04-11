@@ -1,0 +1,63 @@
+.example {
+  @include flex(column, flex-start, center, nowrap);
+  @include padding-left-right($main-padding-mobile);
+  background-color: $add-background-color;
+}
+
+.example__title {
+  @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  font-family: $oswald;
+  align-self: flex-start;
+}
+
+.example__description {
+  @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
+  font-family: $arialmt;
+  width: 100%;
+}
+
+.example__progress-block {
+  @include flex(row, center, center, wrap);
+  width: 100%;
+}
+
+.example__progress {
+  @include flex(column, center, center, wrap);
+  position: relative;
+  background-color: $add-background-color;
+  // min-width: 124px;
+  // min-height: 56px;
+  width: 124px;
+  height: 56px;
+  border-radius: 3px;
+  border: 1px solid $border-color;
+  margin-right: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.example__progres-title {
+  @include font-color-size($main-font-color, lowercase, 12px, $weight-regular, 12px);
+  font-family: $arialmt;
+  background-color: inherit;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 24px);
+  text-align: center;
+}
+
+.example__progress-value {
+  @include font-color-size($title-font-color, uppercase, $card-title-size, $weight-regular, 24px);
+  font-family: $oswald;
+}
+
+.example__cost {
+  @include font-color-size($title-font-color, uppercase, $main-font-size, $weight-regular, 20px);
+}
+
+.example__slide {
+  margin-top: 20px;
+}

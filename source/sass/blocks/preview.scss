@@ -1,0 +1,50 @@
+.preview {
+  height: 480px;
+  // max-height: 480px;
+  width: 100%;
+  background-color: inherit;
+}
+
+.preview__background {
+  height: 305px;
+  // max-height: 305px;
+  background-color: $main-color;
+}
+
+.preview__background-image {
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-position: (50%, 0%);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.preview__wraper {
+  @include flex(column, space-between, center, nowrap);
+  @include margin-left-right($main-padding-mobile);
+  padding-top: 10px;
+  // height: 100vh;
+  // min-height: 360px;
+}
+
+.preview__title {
+  @include font-color-size($contrast-font-color, none, $page-title-size, $weight-regular, 36px);
+  font-family: $oswald;
+  text-align: center;
+}
+
+.preview__slogan {
+  @include font-color-size($contrast-font-color, uppercase, 14px, $weight-regular, 14px);
+  text-align: center;
+}
+
+.preview__image {
+  max-width: 280px;
+  // width: 100% - 2*$main-padding-mobile;
+  // height: 58.33vh;
+  // max-height: 270px;
+}
+
+.preview__button {
+  padding-bottom: 0;
+  // margin-top: 50px;
+}

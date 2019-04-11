@@ -1,0 +1,22 @@
+// .slide {
+//   // position: relative;
+// }
+
+.slide__image-before {
+  // position: absolute;
+  transform: translate(-9px, 0);
+}
+
+.slide__slider-block {
+  @include flex(row, center, center, nowrap);
+}
+
+.slide__text {
+  @include font-color-size($title-font-color, uppercase, $button-font-size, $weight-regular, 20px);
+}
+
+.slide__slider {
+  // @include visualy-hidden;
+  @include margin-left-right(19px);
+  width: 84px;
+}

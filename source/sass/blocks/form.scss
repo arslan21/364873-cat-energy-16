@@ -1,0 +1,109 @@
+.form {
+  @include flex(column, flex-start, center, nowrap);
+  width: 100%;
+}
+
+.form__label {
+  @include font-color-size($label-font-color, uppercase, $label-font-size, $weight-regular, 18px);
+  font-family: $oswald;
+  width: 100%;
+
+  &--text {
+    @include flex (row, space-between, center, nowrap);
+  }
+
+  &--radio {
+    margin-top: 26px;
+  }
+
+  &--radio,
+  &--checkbox {
+    @include flex (row, flex-start, center, nowrap);
+    cursor: pointer;
+  }
+}
+
+.form__contacts > .form__label--text {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+  }
+
+  &.form__label--email::after {
+    width: 17px;
+    height: 13px;
+    background-image: url("../../img/icon-mail.svg");
+    transform: translate(-170%, -50%);
+  }
+
+  &.form__label--phone::after {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/icon-phone.svg");
+    transform: translate(-130%, -50%);
+  }
+}
+//
+// .form__label--email,
+// .form__label--phone {
+// }
+
+.form__input {
+  &--text,
+  &--comment {
+    @include font-color-size($main-font-color, uppercase, $label-font-size, $weight-regular, 18px);
+    @include padding-left-right (16px);
+    font-family: $oswald;
+    cursor: text;
+    border: 1px solid $border-color;
+    width: 100%;
+  }
+
+  &--text {
+    flex-grow: 1;
+    height: 43px;
+    margin-left: 18px;
+  }
+
+  &--radio,
+  &--checkbox {
+    margin-right: 16px;
+  }
+
+  &--comment {
+    min-height: 150px;
+    padding-top: 15px;
+  }
+}
+
+.form__title,
+.form__registration,
+.form__type,
+.form__contacts,
+.form__comment,
+.form__additional {
+  @include padding-left-right($main-padding-mobile);
+  width: 100%;
+}
+
+.form__registration,
+.form__contacts {
+  @include flex(column, flex-start, flex-start, nowrap);
+}
+
+.form__type {
+  @include flex(column, flex-start, flex-start, nowrap);
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 26px;
+}
+
+.form__additional {
+  @include flex(column, flex-start, flex-start, nowrap);
+  padding-bottom: 26px;
+}

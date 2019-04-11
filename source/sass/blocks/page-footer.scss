@@ -1,0 +1,39 @@
+.page-footer {
+  width: 100%;
+  // @include flex(column, center, center, nowrap);
+  @include padding-left-right($main-padding-mobile);
+  background-color: $add-background-color;
+}
+
+.page-footer__list {
+  @include list-style-none;
+  @include flex(column, center, center, nowrap);
+  width: 100%;
+}
+
+.page-footer__item {
+  @include flex(row, center, center, wrap);
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+  min-height: 62px;
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+.page-footer__link {
+  @include link-style;
+  display: block;
+
+  @include flex(column, center, center, wrap);
+  width: 100%;
+  height: 100%;
+  padding-top: 39px;
+  padding-bottom: 31px;
+}
+
+.page-footer__social {
+  width: 100%;
+  height: 100%;
+}
