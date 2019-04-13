@@ -4,7 +4,9 @@
   box-sizing: border-box;
   margin: 0 auto;
   // @include padding-left-right($main-padding-mobile);
+
   width: 100%;
+  min-width: 320px;
   max-width: 2560px;
 
   // @include font($font-size-normal, 18px, 300, $main-font-color);
