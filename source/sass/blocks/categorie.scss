@@ -8,8 +8,9 @@
 
 .categorie__list {
   @include list-style-none;
+  @include padding-left-right($main-padding-mobile);
   @include flex(column, flex-start, center, nowrap);
-  width: 100%;
+  width: 320px;
 }
 
 .categorie__item {

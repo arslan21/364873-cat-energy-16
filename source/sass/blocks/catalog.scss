@@ -1,8 +1,9 @@
 .catalog {
-  @include flex(column, flex-start, center, nowrap);
+  @include flex(column, center, center, nowrap);
+  @include margin-left-right(auto);
   width: 100%;
   height: auto;
-  background-color: $background-color
+  background-color: $background-color;
   // @include padding-left-right($main-padding-mobile);
 }
 
@@ -45,7 +46,7 @@
 .catalog__list {
   @include list-style-none;
   @include flex(row, flex-start, flex-start, wrap);
-  width: 100%;
+  width: 320px;
   height: auto;
 }
 

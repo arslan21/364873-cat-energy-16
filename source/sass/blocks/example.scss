@@ -2,6 +2,11 @@
   @include flex(column, flex-start, center, nowrap);
   @include padding-left-right($main-padding-mobile);
   background-color: $add-background-color;
+  width: 100%;
+}
+
+.example__wrapper {
+  width: 280px;
 }
 
 .example__title {

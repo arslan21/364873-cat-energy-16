@@ -93,14 +93,14 @@
 
   width: 100%;
 
-  &>* {
+  & > * {
     @include margin-left-right($main-padding-mobile);
   }
 }
-
-.form__registration,
-.form__contacts {
-}
+//
+// .form__registration,
+// .form__contacts {
+// }
 
 .form__type {
   // @include flex(column, flex-start, center, nowrap);

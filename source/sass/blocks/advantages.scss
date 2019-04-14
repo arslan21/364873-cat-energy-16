@@ -14,9 +14,11 @@
 
 .advantages__list {
   @include list-style-none;
+  @include margin-left-right(auto);
   @include flex(column, flex-start, flex-start, nowrap);
   background-color: inherit;
-  width: 100%;
+  width: 280px;
+  // @include pading-left-right($main-padding-mobile);
 }
 
 .advantages__item {

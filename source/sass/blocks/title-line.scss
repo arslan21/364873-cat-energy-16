@@ -2,7 +2,7 @@
 .title-line {
   border-top: 3px solid $main-color;
 
-  &>h2[class*="-title"] {
+  & > h2[class*="-title"] {
     z-index: 1;
     align-self: flex-start;
     width: auto;
@@ -11,6 +11,5 @@
     padding-left: $main-padding-mobile;
     transform: translate(0, -50%);
     background-color: $background-color;
-
   }
 }
