@@ -1,5 +1,7 @@
 .nav {
+  @include flex(column, flex-start, center, nowrap);
   width: 100%;
+  // @include visualy-hidden;
 }
 
 .nav__item {
@@ -18,8 +20,35 @@
 
 .nav__link-text {
   @include padding-left-right($main-padding-mobile);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 20px;
-  text-transform: uppercase;
+  @include font-color-size($title-font-color, uppercase, $nav-mobile-size, $weight-medium, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .nav {
+    @include flex(row, flex-end, stretch, wrap);
+  }
+
+  .nav__item {
+    width: auto;
+    height: 110px;
+    border: 0;
+  }
+
+  .nav__link {
+    height: 100%;
+  }
+
+  .nav__link-text {
+    @include font-color-size($nav-font-color, uppercase, 18px, $weight-regular, 25px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav__link-text {
+    @include font-color-size($title-font-color, uppercase, $nav-mobile-size, $weight-regular, 25px);
+
+    &--index {
+      color: $contrast-font-color;
+    }
+  }
 }
