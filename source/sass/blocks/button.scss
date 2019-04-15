@@ -9,6 +9,8 @@
   padding: 0;
 
   &--preview {
+    @include size(245px, 52px);
+    @include margin-left-right(0);
     font-size: 14px;
     line-height: 18px;
   }
