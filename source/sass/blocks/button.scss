@@ -40,4 +40,10 @@
   .button--card {
     @include margin-left-right($card-padding-desktop);
   }
+
+  .button--card.button--card-other {
+    width: 245px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

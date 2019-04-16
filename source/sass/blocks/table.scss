@@ -31,19 +31,50 @@
 @media (min-width: $tablet-width) {
   .table {
     @include font-color-size($main-font-color, none, $table-font-size-tablet, $weight-regular, 16px);
-    width: 100%;
     @include padding-left-right($card-padding-tablet);
+    width: 100%;
+
+    &--other {
+      width: 50%;
+    }
+  }
+
+  .table__line {
+    &--other {
+      width: 50%;
+    }
   }
 
   .table__param,
   .table__value {
     border-bottom: 1px solid $border-color;
     height: 31px;
+
+    &--other {
+      border: 0;
+      text-align: right;
+    }
+
+    .table__value {
+      &--other {
+        width: 95px;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .table {
     @include padding-left-right($card-padding-desktop);
+
+    &--other {
+      width: 285px;
+    }
+  }
+
+  .table__param {
+    &--other {
+      text-align: left;
+    }
   }
 }

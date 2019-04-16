@@ -66,6 +66,15 @@
     min-height: 431px;
     background-color: $add-background-color;
     margin-bottom: 140px;
+
+    &--other {
+      @include padding-left-right($card-padding-tablet);
+      width: 100%;
+      min-height: 140px;
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      margin-bottom: -1px;
+    }
   }
 
   .card__image {
@@ -103,6 +112,12 @@
       text-align: center;
     }
 
+    &--other {
+      caption-side: left;
+      text-align: left;
+      width: 50%;
+    }
+
     // &--plus {
     //   width: 100%;
     //   text-align: center;
@@ -117,5 +132,23 @@
 @media (min-width: $desktop-width) {
   .card {
     width: 245px;
+
+    &--other {
+      @include flex(row, space-between, center, nowrap);
+      @include padding-left-right(0);
+      width: 895px;
+      min-height: 71px;
+      background-color: $background-color;
+      border: 0;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: -1px;
+    }
+
+    .card__title {
+      &--other {
+        width: 324px;
+      }
+    }
   }
 }
