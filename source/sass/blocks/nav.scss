@@ -1,7 +1,6 @@
 .nav {
   @include flex(column, flex-start, center, nowrap);
   width: 100%;
-  // @include visualy-hidden;
 }
 
 .nav__item {

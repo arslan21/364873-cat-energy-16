@@ -15,10 +15,6 @@
   display: block;
 }
 
-.page-header__toggle-text {
-  @include visualy-hidden;
-}
-
 .page-header__toggle::before {
   content: "";
   display: block;
