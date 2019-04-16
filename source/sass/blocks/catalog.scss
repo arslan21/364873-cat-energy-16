@@ -66,3 +66,26 @@
   font-family: $arialmt;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog__part {
+  }
+
+  .catalog__title {
+    // @include margin-left-right($main-padding-tablet);
+  }
+
+  .catalog__list {
+    @include flex(row, space-between, flex-start, wrap);
+    @include padding-left-right($main-padding-tablet);
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    @include flex(row, space-between, flex-start, wrap);
+    @include padding-left-right($main-padding-desktop);
+    width: $desktop-width;
+  }
+}
