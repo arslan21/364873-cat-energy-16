@@ -6,7 +6,7 @@
 .form__label {
   @include font-color-size($label-font-color, uppercase, $label-font-size, $weight-regular, 18px);
   font-family: $oswald;
-  width: 100%;
+  width: 280px;
 
   &--text {
     @include flex (row, space-between, center, nowrap);
@@ -61,7 +61,7 @@
     font-family: $oswald;
     cursor: text;
     border: 1px solid $border-color;
-    width: 100%;
+    // width: 100%;
   }
 
   &--text {
@@ -76,6 +76,7 @@
   }
 
   &--comment {
+    width: 280px;
     min-height: 150px;
     padding-top: 15px;
   }
@@ -87,23 +88,28 @@
 .form__contacts,
 .form__comment,
 .form__additional {
-  @include padding-left-right($main-padding-mobile);
-  width: 100%;
-}
+  // @include padding-left-right($main-padding-mobile);
+  @include flex(column, flex-start, center, nowrap);
 
-.form__registration,
-.form__contacts {
-  @include flex(column, flex-start, flex-start, nowrap);
+  width: 100%;
+
+  & > * {
+    @include margin-left-right($main-padding-mobile);
+  }
 }
+//
+// .form__registration,
+// .form__contacts {
+// }
 
 .form__type {
-  @include flex(column, flex-start, flex-start, nowrap);
+  // @include flex(column, flex-start, center, nowrap);
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   padding-bottom: 26px;
 }
 
 .form__additional {
-  @include flex(column, flex-start, flex-start, nowrap);
+  // @include flex(column, flex-start, center, nowrap);
   padding-bottom: 26px;
 }

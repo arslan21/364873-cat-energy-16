@@ -1,6 +1,6 @@
 .button {
   @include flex(column, center,center, nowrap);
-  @include size(100%, 40px);
+  @include size(280px, 40px);
   @include margin-left-right($main-padding-mobile);
   @include link-style;
   @include font-color-size($contrast-font-color, uppercase, $button-font-size, $weight-regular, 20px);
@@ -18,7 +18,32 @@
     @include margin-left-right(0);
   }
 
-  &--form {
-    width: 280px;
+  // &--form {
+  // }
+}
+
+@media (min-width: $tablet-width) {
+  .button--preview {
+    @include size(245px, 52px);
+    @include margin-left-right(0);
+  }
+
+  .button--card,
+  .button--card-plus {
+    @include margin-left-right($card-padding-tablet);
+    width: 100%;
+    // @include size(249px, 40px);
+  }
+}
+//
+@media (min-width: $desktop-width) {
+  .button--card {
+    @include margin-left-right($card-padding-desktop);
+  }
+
+  .button--card.button--card-other {
+    width: 245px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

@@ -24,3 +24,13 @@
   width: 34px;
   height: 34px;
 }
+
+@media (min-width: $tablet-width) {
+  .copyright__list {
+    width: auto;
+  }
+
+  .copyright__link {
+    margin-left: 23px;
+  }
+}

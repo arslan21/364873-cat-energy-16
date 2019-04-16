@@ -57,3 +57,98 @@
   // margin: 0;
   padding: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .card {
+    @include flex(column, flex-start, center, nowrap);
+    @include padding-left-right(auto);
+    width: ($tablet-width / 2) - $main-padding-tablet - 30px;
+    min-height: 431px;
+    background-color: $add-background-color;
+    margin-bottom: 140px;
+
+    &--other {
+      @include padding-left-right($card-padding-tablet);
+      width: 100%;
+      min-height: 140px;
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      margin-bottom: -1px;
+    }
+  }
+
+  .card__image {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 39px;
+
+    &--big {
+      width: 163px;
+      height: 174px;
+      margin-top: -82px;
+    }
+
+    &--small {
+      width: 195px;
+      height: 208px;
+      margin-top: -48px;
+    }
+  }
+
+  .card__table {
+    height: auto;
+
+    &--main {
+      margin-left: 0;
+      margin-bottom: 33px;
+    }
+  }
+
+  .card__title {
+    // @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
+
+    &--main,
+    &--other {
+      text-align: center;
+    }
+
+    &--other {
+      caption-side: left;
+      text-align: left;
+      width: 50%;
+    }
+
+    // &--plus {
+    //   width: 100%;
+    //   text-align: center;
+    // }
+  }
+
+  .card__button {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    width: 245px;
+
+    &--other {
+      @include flex(row, space-between, center, nowrap);
+      @include padding-left-right(0);
+      width: 895px;
+      min-height: 71px;
+      background-color: $background-color;
+      border: 0;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: -1px;
+    }
+
+    .card__title {
+      &--other {
+        width: 324px;
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
 .catalog {
-  @include flex(column, flex-start, center, nowrap);
+  @include flex(column, center, center, nowrap);
+  @include margin-left-right(auto);
   width: 100%;
   height: auto;
-  background-color: $background-color
+  background-color: $background-color;
   // @include padding-left-right($main-padding-mobile);
 }
 
@@ -45,7 +46,7 @@
 .catalog__list {
   @include list-style-none;
   @include flex(row, flex-start, flex-start, wrap);
-  width: 100%;
+  width: 320px;
   height: auto;
 }
 
@@ -64,4 +65,27 @@
   @include font-color-size($contrast-font-color, none, 16px, $weight-regular, 20px);
   font-family: $arialmt;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  // .catalog__part {
+  // }
+
+  .catalog__title {
+    // @include margin-left-right($main-padding-tablet);
+  }
+
+  .catalog__list {
+    @include flex(row, space-between, flex-start, wrap);
+    @include padding-left-right($main-padding-tablet);
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    @include flex(row, space-between, flex-start, wrap);
+    @include padding-left-right($main-padding-desktop);
+    width: $desktop-width;
+  }
 }

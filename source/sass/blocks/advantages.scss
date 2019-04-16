@@ -14,9 +14,11 @@
 
 .advantages__list {
   @include list-style-none;
+  @include margin-left-right(auto);
   @include flex(column, flex-start, flex-start, nowrap);
   background-color: inherit;
-  width: 100%;
+  width: 280px;
+  // @include pading-left-right($main-padding-mobile);
 }
 
 .advantages__item {
@@ -57,4 +59,52 @@
 
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   word-wrap: break-word;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    @include padding-left-right($main-padding-tablet);
+    align-items: center;
+  }
+
+  .advantages__title {
+    flex-basis: 100%;
+  }
+
+  .advantages__list {
+    @include flex(row, space-between, strerch, wrap);
+    @include margin-left-right(0);
+    width: $tablet-width - (2 * $main-padding-tablet);
+  }
+
+  .advantages__item {
+    @include flex(column, flex-start, flex-start, nowrap);
+    width: ($tablet-width / 2) - $main-padding-tablet - 34px;
+    min-height: 230px;
+    margin-right: 34px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    @include padding-left-right($main-padding-desktop);
+  }
+
+  .advantages__list {
+    width: $desktop-width - (2 * $main-padding-desktop);
+  }
+
+  .advantages__item {
+    width: ($desktop-width / 4) - $main-padding-desktop - 34px;
+    min-height: 230px;
+    margin-right: 34px;
+
+    &:nth-child(4) {
+      margin-right: 0;
+    }
+  }
 }

@@ -6,6 +6,7 @@ $arialmt: "Arial MT";
 $main-font-color: #444444;
 $title-font-color: #111111;
 $label-font-color: #222222;
+$nav-font-color: #222222;
 $contrast-font-color: #ffffff;
 
 // background-color
@@ -17,10 +18,12 @@ $border-color: #cdcdcd;
 
 // font-size
 $table-font-size: 12px;
+$table-font-size-tablet: 16px;
 $main-font-size: 14px;
 $label-font-size: 16px;
 $card-title-font-size: 16px; //уточнить
 $button-font-size: 16px;
+$nav-mobile-size: 20px;
 $page-title-size: 36px;
 $card-title-size: 24px; //уточнить
 
@@ -30,3 +33,14 @@ $weight-medium: 500;
 
 // main-pading
 $main-padding-mobile: 20px;
+$main-padding-tablet: 30px;
+$main-padding-desktop: 110px;
+
+// display width
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+// card-padding
+$card-padding-tablet: 38px;
+$card-padding-desktop: 38px;

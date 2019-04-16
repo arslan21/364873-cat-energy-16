@@ -14,10 +14,6 @@
 .page-header__logo {
   display: block;
 }
-//
-// .page-header__toggle {
-//
-// }
 
 .page-header__toggle-text {
   @include visualy-hidden;
@@ -36,6 +32,58 @@
 }
 
 .page-header__menu {
-  @include flex(column, flex-start, center, nowrap);
   @include list-style-none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    @include flex(row, space-between, center, wrap);
+    @include margin-left-right(auto);
+    @include padding-left-right($main-padding-tablet);
+    width: $tablet-width;
+    min-height: 110px;
+  }
+
+  .page-header__title {
+    width: 173px;
+    display: block;
+    // @include padding-left-right($main-padding-mobile);
+    height: 58px;
+    border-bottom: 0;
+  }
+
+  .page-footer__logo,
+  .page-header__image {
+    width: 173px;
+    height: 58px;
+  }
+
+  .page-header__toggle {
+    @include visualy-hidden;
+  }
+
+  .page-header__nav {
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    // align-items: flex-end;
+    @include padding-left-right($main-padding-desktop);
+    width: $desktop-width;
+    // min-height: 110px;
+  }
+
+  .page-header__title {
+    width: 202px;
+    // @include padding-left-right($main-padding-mobile);
+    height: 58px;
+  }
+
+  .page-footer__logo,
+  .page-header__image {
+    width: 202px;
+    height: 58px;
+  }
 }

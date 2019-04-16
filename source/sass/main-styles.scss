@@ -4,8 +4,10 @@
   box-sizing: border-box;
   margin: 0 auto;
   // @include padding-left-right($main-padding-mobile);
+
   width: 100%;
-  max-width: 2560px;
+  min-width: 320px;
+  // max-width: 2560px;
 
   // @include font($font-size-normal, 18px, 300, $main-font-color);
   background-color: $background-color;
@@ -19,4 +21,18 @@
 
 .visualy-hidden {
   @include visualy-hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .html,
+  .body {
+    min-width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .html,
+  .body {
+    min-width: $desktop-width;
+  }
 }

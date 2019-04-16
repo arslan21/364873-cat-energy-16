@@ -2,6 +2,9 @@
   @include flex(row, flex-start, baseline, wrap);
   background-color: $add-background-color;
   padding-top: 30px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   // @include $padding-left-right($main-padding-mobile);
 
   &--index {
