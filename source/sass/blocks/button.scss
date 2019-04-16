@@ -9,8 +9,6 @@
   padding: 0;
 
   &--preview {
-    @include size(245px, 52px);
-    @include margin-left-right(0);
     font-size: 14px;
     line-height: 18px;
   }
@@ -23,3 +21,18 @@
   // &--form {
   // }
 }
+
+@media (min-width: $tablet-width) {
+  .button--preview {
+    @include size(245px, 52px);
+    @include margin-left-right(0);
+  }
+
+  .button--card {
+    @include size(249px, 40px);
+  }
+}
+//
+// @media (min-width: $desktop-width) {
+//
+// }
