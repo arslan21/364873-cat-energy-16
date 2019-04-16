@@ -28,7 +28,8 @@
     @include margin-left-right(0);
   }
 
-  .button--card {
+  .button--card,
+  .button--card-plus {
     @include margin-left-right($card-padding-tablet);
     width: 100%;
     // @include size(249px, 40px);
