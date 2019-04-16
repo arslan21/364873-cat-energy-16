@@ -29,10 +29,14 @@
   }
 
   .button--card {
-    @include size(249px, 40px);
+    @include margin-left-right($card-padding-tablet);
+    width: 100%;
+    // @include size(249px, 40px);
   }
 }
 //
-// @media (min-width: $desktop-width) {
-//
-// }
+@media (min-width: $desktop-width) {
+  .button--card {
+    @include margin-left-right($card-padding-desktop);
+  }
+}
