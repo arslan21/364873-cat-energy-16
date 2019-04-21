@@ -1,29 +1,29 @@
 .preview {
   height: 480px;
-  // max-height: 480px;
   width: 100%;
   background-color: inherit;
 }
 
 .preview__background {
-  height: 305px;
-  // max-height: 305px;
-  background-color: $main-color;
+  background: linear-gradient($main-color 0, $main-color 305px, $background-color 306px, $background-color 480px);
+  height: 100%;
+  width: 100%;
 }
 
 .preview__background-image {
   background-image: url("../../img/index-background-mobile@1x.jpg");
-  background-position: (50%, 0%);
+  background-position: (50% 0%);
   background-repeat: no-repeat;
+  background-size: auto 305px;
   height: 100%;
 }
 
 .preview__wraper {
   @include flex(column, space-between, center, nowrap);
-  @include margin-left-right($main-padding-mobile);
-  padding-top: 10px;
-  // height: 100vh;
-  // min-height: 360px;
+  @include margin-left-right(auto);
+  padding-top: 3px;
+  width: $mobile-width - (2 * $main-padding-mobile);
+  height: 100%;
 }
 
 .preview__title {
@@ -35,28 +35,27 @@
 .preview__slogan {
   @include font-color-size($contrast-font-color, uppercase, 14px, $weight-regular, 14px);
   text-align: center;
+  margin-top: 0;
 }
 
 .preview__image {
-  max-width: 280px;
-  // width: 100% - 2*$main-padding-mobile;
-  // height: 58.33vh;
-  // max-height: 270px;
+  width: 280px;
+  margin-top: 15px;
 }
 
 .preview__button {
   padding-bottom: 0;
-  // margin-top: 50px;
 }
 
 
 @media (min-width: $tablet-width) {
   .preview {
-    min-height: 820px;
+    height: auto;
   }
 
   .preview__background {
-    background-color: $background-color;
+    height: 100%;
+    background: $background-color;
   }
 
   .preview__background-image {
@@ -66,9 +65,7 @@
   .preview__wraper {
     @include flex(column, flex-start, flex-start, nowrap);
     @include margin-left-right(auto);
-    @include padding-left-right(90px);
-    width: $tablet-width;
-    position: relative;
+    width: $tablet-width - (2 * $main-padding-tablet);
   }
 
   .preview__title {
@@ -77,51 +74,71 @@
     color: $title-font-color;
     width: 420px;
     text-align: left;
+    margin-top: 30px;
+    margin-left: 86px;
   }
 
   .preview__slogan {
     font-size: 20px;
     color: $title-font-color;
-    padding-bottom: 30px;
+    margin-left: 87px;
+    margin-top: 5px;
+    margin-bottom: 30px;
   }
 
   .preview__image {
     order: 1;
-    transform: translate(-90px, 250px);
-    z-index: 0;
-    position: absolute;
+    margin-top: -80px;
     height: 608px;
-    width: 709px;
+    width: 100%;
   }
 
   .preview__button {
+    padding-left: 2px;
+    margin-left: 89px;
     z-index: 1;
-    // @include marlr;
   }
 }
 
 @media (min-width: $desktop-width) {
   .preview {
     min-height: 696px;
-    margin-top: -110px;
+    margin-top: -167px;
   }
 
   .preview__background {
     width: 100%;
-    height: 100%;
     background: linear-gradient(90deg, $background-color 0%, $background-color 50% $main-color 50%, $main-color 100%);
   }
 
   .preview__background-image {
+    @include margin-left-right(auto);
     width: $desktop-width;
     background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-position: (100%, 0%);
+    background-position: (100% 0%);
     background-repeat: no-repeat;
+    background-size: auto;
     height: 696px;
+    position: relative;
+  }
+
+  .preview__wraper {
+    width: $desktop-width - (2 * $main-padding-desktop);
+    padding-top: 191px;
+  }
+
+  .preview__title {
+    margin-left: 78px;
+  }
+
+  .preview__slogan,
+  .preview__button {
+    margin-left: 79px;
   }
 
   .preview__image {
-    transform: translate(60%, 142px);
+    position: absolute;
+    transform: translate(480px, 35px);
     height: 499px;
     width: 522px;
   }
