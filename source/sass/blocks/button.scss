@@ -7,6 +7,7 @@
   background-color: $main-color;
   border: 0;
   padding: 0;
+  margin-top: 5px;
 
   &--preview {
     font-size: 14px;
@@ -23,8 +24,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .button--preview {
+  .button {
+    @include font-color-size($contrast-font-color, uppercase, $button-font-size-tablet, $weight-regular, 20px);
     @include size(245px, 52px);
+    margin-top: 20px;
+  }
+
+  .button--preview {
     @include margin-left-right(0);
   }
 
@@ -35,8 +41,12 @@
     // @include size(249px, 40px);
   }
 }
-//
+
 @media (min-width: $desktop-width) {
+  .button {
+    margin-top: 25px;
+  }
+
   .button--card {
     @include margin-left-right($card-padding-desktop);
   }
