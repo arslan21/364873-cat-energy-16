@@ -3,13 +3,17 @@
   @include padding-left-right($main-padding-mobile);
   width: 100%;
   margin-top: 0;
+  margin-bottom: 22px;
   background-color: inherit;
 }
 
 .advantages__title {
   @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  @include margin-left-right(auto);
   font-family: $oswald;
-  margin-bottom: 0;
+  width: $mobile-width - (2 * $main-padding-mobile);
+  margin-bottom: 29px;
+  margin-top: 15px;
 }
 
 .advantages__list {
@@ -17,23 +21,23 @@
   @include margin-left-right(auto);
   @include flex(column, flex-start, flex-start, nowrap);
   background-color: inherit;
-  width: 280px;
-  // @include pading-left-right($main-padding-mobile);
+  width: $mobile-width - (2 * $main-padding-mobile);
 }
 
 .advantages__item {
-  @include flex(row, flex-start, center, nowrap);
+  @include flex(row, flex-start, stretch, nowrap);
   width: 100%;
   margin-bottom: 20px;
 }
 
 .advantages__image {
-  min-width: 60px;
+  flex-shrink: 0;
+  width: 60px;
   height: 60px;
   margin-right: 20px;
   background-color: $main-color;
   background-repeat: no-repeat;
-  background-size: 60px 60px;
+  background-size: 80%;
   background-position: 50% 50%;
 
   &--leaf {
@@ -54,21 +58,24 @@
 }
 
 .advantages__description {
-  width: auto;
-  font-family: $arialmt;
-
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
+  font-family: $arialmt;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    @include padding-left-right($main-padding-tablet);
+    @include padding-left-right(auto);
     align-items: center;
   }
 
   .advantages__title {
-    flex-basis: 100%;
+    @include font-color-size($title-font-color, none, $title-font-size-tablet, $weight-regular, 60px);
+    width: $tablet-width - (2 * $main-padding-tablet);
+    margin-bottom: 38px;
   }
 
   .advantages__list {
@@ -79,13 +86,60 @@
 
   .advantages__item {
     @include flex(column, flex-start, flex-start, nowrap);
-    width: ($tablet-width / 2) - $main-padding-tablet - 34px;
-    min-height: 230px;
-    margin-right: 34px;
+    width: ($tablet-width / 2) - $main-padding-tablet - 30px;
+    min-height: 228px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    position: relative;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
+
+    &::after {
+      @include font-color-size($advantages-num-font-color, none, $advantages-num-font-size, $weight-regular, 0.72em);
+      position: absolute;
+      content: "";
+      font-size: 281px;
+      padding: 0;
+      margin: 0;
+      display: block;
+      width: auto;
+      height: 100%;
+      left: 77%;
+      transform: translate(-100%, 0);
+      z-index: 0;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+      left: 71%;
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+      left: 76%;
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+
+  .advantages__image {
+    @include size(80px, 80px);
+    background-size: 60%;
+  }
+
+  .advantages__description {
+    @include font-color-size($main-font-color, none, $main-font-size-tablet, $weight-regular, 24px);
+    margin-top: 32px;
+    padding-right: 60px;
+    z-index: 1;
   }
 }
 
@@ -94,17 +148,40 @@
     @include padding-left-right($main-padding-desktop);
   }
 
+  .advantages__title {
+    width: $desktop-width - (2 * $main-padding-desktop);
+    margin-top: 42px;
+  }
+
   .advantages__list {
     width: $desktop-width - (2 * $main-padding-desktop);
   }
 
   .advantages__item {
-    width: ($desktop-width / 4) - $main-padding-desktop - 34px;
-    min-height: 230px;
-    margin-right: 34px;
+    width: ($desktop-width - (2 * $main-padding-desktop) - (80px * 3)) / 4;
+
+    &:nth-child(n) {
+      margin-right: 80px;
+    }
 
     &:nth-child(4) {
       margin-right: 0;
     }
+
+    &:nth-child(n)::after {
+      left: 100%;
+    }
+
+    &:nth-child(1)::after {
+      left: 93%;
+    }
+
+    &:nth-child(4)::after {
+      left: 102%;
+    }
+  }
+
+  .advantages__description {
+    padding-right: 0;
   }
 }
