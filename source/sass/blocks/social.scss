@@ -1,13 +1,18 @@
 .social {
   @include list-style-none;
-  @include flex(row, center, center, wrap);
-  // width: auto;
+  @include flex(row, center, stretch, wrap);
+  width: 100%;
+  height: 100%;
 }
 
 .social__item {
-  margin-right: 40px;
+  margin-right: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
+  // width: 22px;
+  // height: 22px;
+  height: 19px;
   width: 22px;
-  height: 22px;
 
   &:last-child {
     margin-right: 0;
@@ -21,7 +26,7 @@
 }
 
 .social__link-image {
-  @include size(100%, 100%);
+  // @include size(auto, auto);
   background-color: inherit;
 }
 

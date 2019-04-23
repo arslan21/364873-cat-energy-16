@@ -15,10 +15,12 @@
   @include flex(row, center, center, wrap);
   border-bottom: 1px solid $border-color;
   width: 100%;
-  min-height: 62px;
+  min-height: 63px;
 
   &:last-child {
     border: 0;
+    min-height: 84px;
+    display: block;
   }
 }
 
@@ -43,12 +45,14 @@
     @include margin-left-right(auto);
     @include padding-left-right(0);
     @include flex(row, center, stretch, nowrap);
+    min-height: 150px;
   }
 
   .page-footer__list {
-    @include flex(row, space-between, center, nowrap);
+    @include flex(row, space-between, stretch, nowrap);
     @include padding-left-right($main-padding-tablet);
     width: $tablet-width;
+    padding-bottom: 5px;
   }
 
   .page-footer__item {
