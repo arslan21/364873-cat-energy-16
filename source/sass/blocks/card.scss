@@ -1,15 +1,28 @@
 .card {
-  @include flex(row, flex-start, center, wrap);
+  @include flex(row, flex-start, stretch, wrap);
   @include padding-left-right($main-padding-mobile);
   width: 320px;
   min-height: 210px;
+  border: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
+  // border-bottom: 1px solid $border-color;
+  margin-top: -1px;
+
+  &--main {
+    padding-bottom: 24px;
+  }
+
+  &--plus {
+    @include flex(column, flex-start, center, nowrap);
+  }
 }
 
 .card__image {
-  flex-basis: 140px;
+  // flex-basis: 140px;
   height: 144px;
-  margin-right: auto;
+  // margin-right: auto;
   margin-bottom: auto;
+  flex-basis: 50%;
 }
 
 .card__title {
@@ -21,6 +34,10 @@
     text-align: left;
   }
 
+  &--main {
+    margin-bottom: 11px;
+  }
+
   &--main span {
     display: block;
   }
@@ -28,6 +45,8 @@
   &--plus {
     width: 100%;
     text-align: center;
+    margin-top: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -36,13 +55,19 @@
   font-family: $arialmt;
   width: 100%;
   text-align: center;
+
+  &--plus {
+    margin-top: 6px;
+  }
 }
 
 .card__table {
   height: auto;
+  margin-top: 21px;
 
   &--main {
-    margin-left: auto;
+    // margin-left: auto;
+    flex-basis: 50%;
   }
   // &--other {
   // }
@@ -52,45 +77,63 @@
   @include size(30px, 30px);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 27px;
+  margin-bottom: 7px;
+
   background-color: $background-color;
   border: 0;
-  // margin: 0;
   padding: 0;
+}
+
+.card__button--plus {
+  margin-top: 10px;
 }
 
 @media (min-width: $tablet-width) {
   .card {
     @include flex(column, flex-start, center, nowrap);
-    @include padding-left-right(auto);
+    @include padding-left-right(38px);
     width: ($tablet-width / 2) - $main-padding-tablet - 30px;
     min-height: 431px;
     background-color: $add-background-color;
-    margin-bottom: 140px;
+    margin-top: 133px;
+    // margin-bottom: 140px;
+    margin-bottom: 7px;
+
+    &--main {
+      border: 0;
+      // margin-top: 0
+    }
+
+    &--plus {
+      background-color: $background-color;
+    }
 
     &--other {
       @include padding-left-right($card-padding-tablet);
       width: 100%;
       min-height: 140px;
       background-color: $background-color;
-      border: 1px solid $border-color;
+      // border: 1px solid $border-color;
       margin-bottom: -1px;
     }
   }
 
   .card__image {
+
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 39px;
+    margin-bottom: 16px;
 
     &--big {
-      width: 163px;
-      height: 174px;
+      width: 195px;
+      min-height: 208px;
       margin-top: -82px;
     }
 
     &--small {
-      width: 195px;
-      height: 208px;
+      width: 163px;
+      min-height: 174px;
       margin-top: -48px;
     }
   }
@@ -105,7 +148,9 @@
   }
 
   .card__title {
+    font-size: 20px;
     // @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
+    margin-bottom: 20px;
 
     &--main,
     &--other {
@@ -125,13 +170,32 @@
   }
 
   .card__button {
-    margin-bottom: 40px;
+    margin-top: 2px;
+    margin-bottom: 16px;
+
+    &--plus {
+      margin-top: auto;
+      margin-bottom: 37px;
+    }
+  }
+
+  .card__add-icon {
+    @include size(60px, 60px);
+    background-color: inherit;
+    margin-top: 65px;
+    margin-bottom: 31px;
+  }
+
+  .card__slogan--plus {
+    font-size: 16px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .card {
-    width: 245px;
+    width: ($desktop-width - (2 * $main-padding-desktop) - (80px * 3)) / 4;
+    // width: 245px;
+    margin-top: 133px;
 
     &--other {
       @include flex(row, space-between, center, nowrap);
@@ -148,6 +212,10 @@
     .card__title {
       &--other {
         width: 324px;
+      }
+
+      &--plus {
+        margin-top: 7px;
       }
     }
   }
