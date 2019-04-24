@@ -1,10 +1,11 @@
 .table {
-  @include font-color-size($main-font-color, none, $table-font-size, $weight-regular, 16px);
+  @include font-color-size($main-font-color, none, $table-font-size, $weight-regular, 15px);
   font-family: $arialmt;
   border-collapse: collapse;
 }
 
 .table__value {
+  @include padding-left-right(0);
   text-align: right;
 
   &--main {
@@ -17,6 +18,7 @@
 }
 
 .table__param {
+  @include padding-left-right(0);
   text-align: left;
 
   &--main {

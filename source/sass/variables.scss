@@ -8,6 +8,7 @@ $title-font-color: #111111;
 $label-font-color: #222222;
 $nav-font-color: #222222;
 $contrast-font-color: #ffffff;
+$advantages-num-font-color: #f2f2f2;
 
 // background-color
 $background-color: #ffffff;
@@ -23,9 +24,13 @@ $main-font-size: 14px;
 $label-font-size: 16px;
 $card-title-font-size: 16px; //уточнить
 $button-font-size: 16px;
+$button-font-size-tablet: 20px;
 $nav-mobile-size: 20px;
 $page-title-size: 36px;
 $card-title-size: 24px; //уточнить
+$title-font-size-tablet: 60px;
+$main-font-size-tablet: 16px;
+$advantages-num-font-size: 281px;
 
 // font-weight
 $weight-regular: 400;
@@ -38,6 +43,7 @@ $main-padding-desktop: 110px;
 
 // display width
 $mobile-width: 320px;
+$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 

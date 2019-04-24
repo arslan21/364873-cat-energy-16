@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="body">
@@ -11,25 +13,26 @@
         <a href="index.html" class="page-header__logo">
           <img class="page-header__image" src="img/logo-mobile.svg" alt="Cat Energy" height="38" width="191">
         </a>
-        <a href="#" class="page-header__toggle">
-          <span class="page-header__toggle-text">Расскрыть меню</span>
-        </a>
       </div>
-      <nav class="page-header__nav">
-        <ul class="page-header__menu nav">
-          <li class="nav__item">
-            <a href="#" class="nav__link"><span class="nav__link-text">Главная</span></a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link"><span class="nav__link-text">Каталог продукции</span></a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link"><span class="nav__link-text">Подбор программы</span></a>
-          </li>
-        </ul>
+      <nav class="page-header__nav nav nav--opened nav--nojs">
+        <div class="nav__wrapper">
+          <a href="#" class="nav__toggle">
+            <span class="nav__toggle-text visualy-hidden">Расскрыть меню</span>
+          </a>
+          <ul class="page-header__menu nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link"><span class="nav__link-text nav__link-text">Главная</span></a>
+            </li>
+            <li class="nav__item nav__item--active">
+              <a href="catalog.html" class="nav__link"><span class="nav__link-text nav__link-text">Каталог продукции</span></a>
+            </li>
+            <li class="nav__item">
+              <a href="programm.html" class="nav__link"><span class="nav__link-text nav__link-text">Подбор программы</span></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-
 
     <section class="catalog">
 
@@ -184,8 +187,8 @@
               <img src="img/icon-plus-mobile.svg" class="card__add-icon-image" alt="plus" width="30" height="30">
             </button>
             <p class="card__title card__title--plus">Показать еще 100500 товаров</p>
-            <p class="card__slogan">На самом деле вкусов гораздо больше!</p>
-            <button type="button" class="card__button button button--card-plus" name="button">Показать все</button>
+            <p class="card__slogan card__slogan--plus">На самом деле вкусов гораздо больше!</p>
+            <button type="button" class="card__button card__button--plus button button--card-plus" name="button">Показать все</button>
           </li>
 
         </ul>
@@ -271,17 +274,17 @@
           <ul class="page-footer__social social">
             <li class="social__item">
               <a href="#" class="social__link social__link--vk">
-                <img src="img/icon-vk-mobile.svg" class="social__link-image" alt="vk" width="22" height="22">
+                <img src="img/icon-vk-mobile.svg" class="social__link-image" alt="vk" width="22" height="12">
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--insta">
-                <img src="img/icon-insta-mobile.svg" class="social__link-image" alt="insta" width="22" height="22">
+                <img src="img/icon-insta-mobile.svg" class="social__link-image" alt="insta" width="16" height="16">
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--fb">
-                <img src="img/icon-fb-mobile.svg" class="social__link-image" alt="fb" width="22" height="22">
+                <img src="img/icon-fb-mobile.svg" class="social__link-image" alt="fb" width="10" height="19">
               </a>
             </li>
           </ul>
@@ -293,12 +296,13 @@
             </li>
             <li class="copyright__item">
               <a href="#" class="copyright__link">
-                <img src="img/htmlacademy.svg" class="copyright__image" alt="HTMLAcademy" width="27" height="34"></img>
+                <img src="img/htmlacademy0.svg" class="copyright__image" alt="HTMLAcademy" width="27" height="34"></img>
               </a>
             </li>
           </ul>
         </li>
       </ul>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

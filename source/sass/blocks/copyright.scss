@@ -1,16 +1,26 @@
 .copyright {
   // @include flex(row, space-between, baseline, row);
+  padding-bottom: 8px;
 }
 
 .copyright__list {
   @include list-style-none;
   @include flex(row, space-between, center, wrap);
   width: 100%;
+  height: 100%;
 }
 
 .copyright__item {
   @include flex(row, center, center, wrap);
   width: auto;
+
+  &:first-child {
+    margin-left: -3px;
+  }
+
+  &:last-child {
+    margin-right: -2px;
+  }
 }
 
 .copyright__text {
@@ -26,11 +36,37 @@
 }
 
 @media (min-width: $tablet-width) {
+  .copyright {
+    padding-top: 1px;
+    padding-bottom: 0;
+  }
+
   .copyright__list {
     width: auto;
   }
 
+  .copyright__item {
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: -3px;
+    }
+  }
+
   .copyright__link {
-    margin-left: 23px;
+    margin-left: 18px;
+  }
+
+  .copyright__image {
+    width: 27px;
+    height: 34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    padding-top: 4px;
   }
 }
