@@ -48,7 +48,7 @@
 .catalog__list {
   @include list-style-none;
   @include flex(row, flex-start, flex-start, wrap);
-  width: 320px;
+  width: $mobile-width;
   height: auto;
 }
 
