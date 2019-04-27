@@ -124,15 +124,14 @@
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 16px;
+    width: 100%;
 
     &--big {
-      width: 195px;
       min-height: 208px;
       margin-top: -82px;
     }
 
     &--small {
-      width: 163px;
       min-height: 174px;
       margin-top: -48px;
     }
