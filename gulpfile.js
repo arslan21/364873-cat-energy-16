@@ -74,9 +74,10 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/**/*", gulp.series("clean", "copy"));
-  gulp.watch("source/js/**/*", gulp.series("clean", "copy"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("build"));
+  gulp.watch("source/*.html", gulp.series("build"));
+  gulp.watch("source/img/**/*", gulp.series("build"));
+  gulp.watch("source/js/**/*", gulp.series("build"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
