@@ -6,24 +6,29 @@
 }
 
 .example__wrapper {
-  width: 280px;
+  width: $mobile-width - (2 * $main-padding-mobile);
 }
 
 .example__title {
   @include font-color-size($title-font-color, none, $page-title-size, $weight-regular, 60px);
+  width: $mobile-width - (2 * $main-padding-mobile);
   font-family: $oswald;
-  align-self: flex-start;
+  margin-top: 16px;
+  margin-bottom: 10px;
 }
 
 .example__description {
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   font-family: $arialmt;
   width: 100%;
+  margin-bottom: 24px;
+  word-wrap: break-word;
 }
 
 .example__progress-block {
   @include flex(row, center, center, wrap);
   width: 100%;
+  margin-bottom: 34px;
 }
 
 .example__progress {
@@ -44,12 +49,14 @@
 }
 
 .example__progres-title {
+  @include padding-left-right(16px);
   @include font-color-size($main-font-color, lowercase, 12px, $weight-regular, 12px);
   font-family: $arialmt;
   background-color: inherit;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  // bottom: 0;
+  top: 12px;
   transform: translate(-50%, 24px);
   text-align: center;
 }
@@ -61,6 +68,9 @@
 
 .example__cost {
   @include font-color-size($title-font-color, uppercase, $main-font-size, $weight-regular, 20px);
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: 0;
 }
 
 .example__slide {
