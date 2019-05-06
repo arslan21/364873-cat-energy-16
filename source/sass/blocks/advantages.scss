@@ -166,6 +166,7 @@
 @media (min-width: $desktop-width) {
   .advantages {
     @include padding-left-right($main-padding-desktop);
+    margin-bottom: -8px;
   }
 
   .advantages__title {

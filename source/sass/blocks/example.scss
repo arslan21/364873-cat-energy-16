@@ -1,11 +1,12 @@
 .example {
-  @include flex(column, flex-start, center, nowrap);
   @include padding-left-right($main-padding-mobile);
   background-color: $add-background-color;
   width: 100%;
 }
 
 .example__wrapper {
+  @include flex(column, flex-start, center, nowrap);
+  @include margin-left-right(auto);
   width: $mobile-width - (2 * $main-padding-mobile);
 }
 
@@ -34,7 +35,7 @@
 .example__progress {
   @include flex(column, center, center, wrap);
   position: relative;
-  background-color: $add-background-color;
+  background-color: inherit;
   // min-width: 124px;
   // min-height: 56px;
   width: 124px;
@@ -52,7 +53,7 @@
   @include padding-left-right(16px);
   @include font-color-size($main-font-color, lowercase, 12px, $weight-regular, 12px);
   font-family: $arialmt;
-  background-color: inherit;
+  background-color: $add-background-color;
   position: absolute;
   left: 50%;
   // bottom: 0;
@@ -75,4 +76,155 @@
 
 .example__slide {
   margin-top: 20px;
+  width: $mobile-width;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    @include padding-left-right($main-padding-tablet);
+    background-color: $background-color;
+    width: 100%;
+  }
+
+
+  .example__wrapper {
+    @include flex(row, space-between, stretch, wrap);
+    width: $tablet-width - (2 * $main-padding-tablet);
+    // width: 100%;
+  }
+
+  .example__title {
+    @include font-color-size($title-font-color, none, $title-font-size-tablet, $weight-regular, 60px);
+    width: 100%;
+    // width: $tablet-width - (2 * $main-padding-tablet);
+    // font-family: $oswald;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .example__description {
+    @include font-color-size($main-font-color, none, $main-font-size-tablet, $weight-regular, 24px);
+    // width: $tablet-width - (2 * $main-padding-tablet);
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-right: 8px;
+    word-wrap: break-word;
+  }
+
+  .example__progress-block {
+    margin-top: 30px;
+    width: auto;
+  }
+
+  .example__progress {
+    width: 162px;
+    height: 72px;
+    margin-right: 42px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .example__progress-value {
+    @include font-color-size($title-font-color, uppercase, 30px, $weight-regular, 37px);
+    font-family: $oswald;
+    margin-bottom: 5px;
+  }
+
+  .example__progres-title {
+    @include padding-left-right(8px);
+    background-color: $background-color;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 26px;
+    margin-bottom: 0;
+    // min-width: 120px;
+  }
+
+  .example__progress--weight .example__progres-title {
+    width: 114px;
+  }
+
+  .example__progress--time .example__progres-title {
+    width: 144px;
+  }
+
+  .example__cost {
+    @include font-color-size($title-font-color, uppercase, 20px, $weight-regular, 29px);
+    width: 25%;
+    text-align: right;
+    padding-top: 15px;
+    margin-top: 21px;
+  }
+
+  .example__slide {
+    margin-top: 51px;
+    // width: $tablet-width - (2 * $main-padding-tablet);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    @include padding-left-right($main-padding-desktop);
+    position: relative;
+    background-color: transparent;
+  }
+
+  .example__background__desk {
+    // background: linear-gradient(90deg, $add-background-color 0%, $slider-background-color 100%);
+    background: linear-gradient(90deg, $add-background-color 72.57%, $slider-background-color 72.57%);
+    position: absolute;
+    width: 100%;
+    height: 462px;
+    top: 169px;
+    left: 0;
+    // z-index: -1;
+  }
+
+  .example__desk {
+    @include margin-left-right(auto);
+    @include flex(row, space-between, stretch, nowrap);
+    width: $desktop-width - 2 * $main-padding-desktop;
+  }
+
+  .example__wrapper {
+    @include margin-left-right(0);
+    width: 450px;
+    display: block;
+  }
+
+  .example__title {
+    margin-top: 35px;
+  }
+
+  .example__description {
+    margin-top: 145px;
+    padding-right: 13px;
+    margin-bottom: 69px;
+    position: relative;
+  }
+
+  .example__progress-block {
+    justify-content: flex-start;
+  }
+
+  .example__cost {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-top: 0;
+    margin-top: 56px;
+    margin-bottom: 0;
+  }
+
+  .example__slide {
+    margin-top: 0;
+    // width: $tablet-width - (2 * $main-padding-tablet);
+  }
+
+  .example__progres-title {
+    background-color: $add-background-color;
+  }
 }
