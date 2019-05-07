@@ -180,6 +180,7 @@
 
   .advantages__item {
     width: ($desktop-width - (2 * $main-padding-desktop) - (80px * 3)) / 4;
+    margin-bottom: 36px;
 
     &:nth-child(n) {
       margin-right: 80px;
