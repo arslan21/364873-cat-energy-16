@@ -223,7 +223,10 @@
 
           <li class="catalog__item card card--plus">
             <button type="buttton" class="card__add-icon">
-              <img src="img/icon-plus-mobile.svg" class="card__add-icon-image" alt="plus" width="30" height="30">
+              <picture>
+                <source media="(min-width: 768px)"  srcset="img/icon-plus.svg">
+                <img src="img/icon-plus-mobile.svg" class="card__add-icon-image" alt="plus" width="30" height="30">
+              </picture>
             </button>
             <p class="card__title card__title--plus">Показать еще 100500 товаров</p>
             <p class="card__slogan card__slogan--plus">На самом деле вкусов гораздо больше!</p>
@@ -234,60 +237,63 @@
       </section>
 
       <section class="catalog__part catalog__part--other  title-line">
-        <h2 class="catalog__part-title catalog__part-title--other">Дополнительные товары</h2>
-        <ul class="catalog__list catalog__list--other">
+        <div class="catalog__part-wraper--other">
 
-          <li class="catalog__item card card--other">
-            <table class="card__table card__table--other table table--other">
-              <caption class="card__title card__title--other">Сахарозаменитель</caption>
-              <tr class="table__line table__line--other">
-                <td class="table__param table__param--other">1 упаковка (100 г)</td>
-                <td class="table__value table__value--other">200 Р.</td>
-              </tr>
-            </table>
-            <button class="card__button button button--card button--card-other">Заказать</button>
-          </li>
+          <h2 class="catalog__part-title catalog__part-title--other"><p>Дополнительные товары</p></h2>
+          <ul class="catalog__list catalog__list--other">
 
-          <li class="catalog__item card card--other">
-            <table class="card__table card__table--other table table--other">
-              <caption class="card__title card__title--other">Питьевая вода</caption>
-              <tr class="table__line table__line--other">
-                <td class="table__param table__param--other">5 литров</td>
-                <td class="table__value table__value--other">50 Р.</td>
-              </tr>
-            </table>
-            <button class="card__button button button--card button--card-other">Заказать</button>
-          </li>
+            <li class="catalog__item card card--other">
+              <table class="card__table card__table--other table table--other">
+                <caption class="card__title card__title--other">Сахарозаменитель</caption>
+                <tr class="table__line table__line--other">
+                  <td class="table__param table__param--other">1 упаковка (100 г)</td>
+                  <td class="table__value table__value--other">200 Р.</td>
+                </tr>
+              </table>
+              <button class="card__button button button--card button--card-other">Заказать</button>
+            </li>
 
-          <li class="catalog__item card card--other">
-            <table class="card__table card__table--other table table--other">
-              <caption class="card__title card__title--other">Молоко</caption>
-              <tr class="table__line table__line--other">
-                <td class="table__param table__param--other">1 литр</td>
-                <td class="table__value table__value--other">100 Р.</td>
-              </tr>
-            </table>
-            <button class="card__button button button--card button--card-other">Заказать</button>
-          </li>
+            <li class="catalog__item card card--other">
+              <table class="card__table card__table--other table table--other">
+                <caption class="card__title card__title--other">Питьевая вода</caption>
+                <tr class="table__line table__line--other">
+                  <td class="table__param table__param--other">5 литров</td>
+                  <td class="table__value table__value--other">50 Р.</td>
+                </tr>
+              </table>
+              <button class="card__button button button--card button--card-other">Заказать</button>
+            </li>
 
-          <li class="catalog__item card card--other">
-            <table class="card__table card__table--other table table--other">
-              <caption class="card__title card__title--other">Витамины</caption>
-              <tr class="table__line table__line--other">
-                <td class="table__param table__param--other">1 упаковка (30 г)</td>
-                <td class="table__value table__value--other">300 Р.</td>
-              </tr>
-            </table>
-            <button class="card__button button button--card button--card-other">Заказать</button>
-          </li>
+            <li class="catalog__item card card--other">
+              <table class="card__table card__table--other table table--other">
+                <caption class="card__title card__title--other">Молоко</caption>
+                <tr class="table__line table__line--other">
+                  <td class="table__param table__param--other">1 литр</td>
+                  <td class="table__value table__value--other">100 Р.</td>
+                </tr>
+              </table>
+              <button class="card__button button button--card button--card-other">Заказать</button>
+            </li>
 
-        </ul>
+            <li class="catalog__item card card--other">
+              <table class="card__table card__table--other table table--other">
+                <caption class="card__title card__title--other">Витамины</caption>
+                <tr class="table__line table__line--other">
+                  <td class="table__param table__param--other">1 упаковка (30 г)</td>
+                  <td class="table__value table__value--other">300 Р.</td>
+                </tr>
+              </table>
+              <button class="card__button button button--card button--card-other">Заказать</button>
+            </li>
+
+          </ul>
+          <div class="catalog__bonus">
+            <img src="img/gift.png" alt="bonus" width="55" height="60">
+            <p class="catalog__bonus-slogan">Закажите все <br> и получите чехол для кота в подарок!</p>
+          </div>
+        </div>
       </section>
 
-      <section class="catalog__bonus">
-        <img src="img/gift.png" alt="bonus" width="55" height="60">
-        <p class="catalog__bonus-slogan">Закажите все и получите чехол для кота в подарок!</p>
-      </section>
 
     </section>
 
