@@ -3,13 +3,18 @@
   @include padding-left-right($main-padding-mobile);
   width: $mobile-width;
   min-height: 210px;
-  border: 1px solid $border-color;
-  // border-top: 1px solid $border-color;
-  // border-bottom: 1px solid $border-color;
+  // border: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   margin-top: -1px;
 
   &--main {
     padding-bottom: 24px;
+  }
+
+  &--other {
+    @include padding-left-right(0);
+    min-height: 130px;
   }
 
   &--plus {
@@ -21,8 +26,8 @@
   // flex-basis: 140px;
   height: 144px;
   // margin-right: auto;
-  margin-bottom: auto;
   flex-basis: 50%;
+  margin-bottom: -2px;
 }
 
 .card__title {
@@ -45,8 +50,12 @@
   &--plus {
     width: 100%;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-bottom: 0;
+  }
+
+  &--other {
+    height: 29px;
   }
 }
 
@@ -69,8 +78,10 @@
     // margin-left: auto;
     flex-basis: 50%;
   }
-  // &--other {
-  // }
+
+  &--other {
+    width: 100%;
+  }
 }
 
 .card__add-icon {
@@ -79,7 +90,6 @@
   margin-right: auto;
   margin-top: 27px;
   margin-bottom: 7px;
-
   background-color: $background-color;
   border: 0;
   padding: 0;
@@ -87,6 +97,10 @@
 
 .card__button--plus {
   margin-top: 10px;
+}
+
+.button--card-other {
+  margin-top: -3px;
 }
 
 @media (min-width: $tablet-width) {
@@ -102,7 +116,13 @@
 
     &--main {
       border: 0;
+      padding-bottom: 22px;
       // margin-top: 0
+    }
+
+    &--plus,
+    &--other {
+      border: 1px solid $border-color;
     }
 
     &--plus {
@@ -114,8 +134,9 @@
       width: 100%;
       min-height: 140px;
       background-color: $background-color;
-      // border: 1px solid $border-color;
       margin-bottom: -1px;
+      // border: 1px solid $border-color;
+      margin-top: 0;
     }
   }
 
@@ -159,19 +180,22 @@
       caption-side: left;
       text-align: left;
       width: 50%;
+      margin: 0;
     }
 
-    // &--plus {
-    //   width: 100%;
-    //   text-align: center;
-    // }
+    &--plus {
+      // width: 100%;
+      // text-align: center;
+      @include padding-left-right(80px);
+      @include margin-left-right(0);
+      margin-top: 18px;
+    }
   }
 
   .card__button {
     margin-top: 2px;
     margin-bottom: 16px;
-    width: calc(100% - 38px * 2);
-
+    // width: calc(100% - 38px * 2);
 
     &--plus {
       margin-top: auto;
@@ -182,11 +206,17 @@
   .card__add-icon {
     @include size(60px, 60px);
     background-color: inherit;
-    margin-top: 65px;
+    margin-top: 55px;
     margin-bottom: 31px;
   }
 
+
+  .card__add-icon-image {
+    @include size(60px, 60px);
+  }
+
   .card__slogan--plus {
+    @include padding-left-right(78px);
     font-size: 16px;
   }
 }
@@ -201,12 +231,13 @@
       @include flex(row, space-between, center, nowrap);
       @include padding-left-right(0);
       width: 895px;
-      min-height: 71px;
+      min-height: 73px;
       background-color: $background-color;
       border: 0;
       border-top: 1px solid $border-color;
       border-bottom: 1px solid $border-color;
       margin-bottom: -1px;
+      margin-top: 0;
     }
 
     .card__title {
@@ -215,8 +246,17 @@
       }
 
       &--plus {
+        @include padding-left-right(50px);
         margin-top: 7px;
       }
+    }
+
+    .card__slogan--plus {
+      @include padding-left-right(30px);
+    }
+
+    .card__add-icon {
+      margin-bottom: 42px;
     }
   }
 }
