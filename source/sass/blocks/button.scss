@@ -25,6 +25,11 @@
     color: $main-font-color;
   }
 
+  &--card-other {
+    margin-top: -3px;
+  }
+
+
   // &--form {
   // }
 }
@@ -52,6 +57,10 @@
     height: 40px;
     // @include size(249px, 40px);
   }
+
+  .button--card-other {
+    width: 100%;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -59,13 +68,17 @@
     margin-top: 25px;
   }
 
-  .button--card {
-    @include margin-left-right($card-padding-desktop);
+  .button--card,
+  .button--card-plus {
+    width: calc(100% - 38px * 2);
+
+    // @include margin-left-right($card-padding-desktop);
   }
 
   .button--card.button--card-other {
     width: 245px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 0;
   }
 }
