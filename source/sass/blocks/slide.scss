@@ -8,7 +8,8 @@
 
 .slide__image-block {
   @include flex(row, center, stretch, nowrap);
-  width: 100%;
+  @include margin-left-right(auto);
+  width: $mobile-width;
   height: 240px;
   position: relative;
 }
@@ -70,17 +71,19 @@
 
   .slide__image-block {
     height: 631px;
-    // width: 690px
+    width: 100%;
   }
 
   .slide__before {
-    background: linear-gradient(180deg, $background-color 0, $background-color 169px, $add-background-color 170px, $add-background-color 170px);
+    background: linear-gradient(180deg, $background-color 0, $background-color 169px, $add-background-color 170px, $add-background-color);
     height: 631px;
+    padding-left: 45px;
   }
 
   .slide__after {
+    background: linear-gradient(180deg, $background-color 0, $background-color 169px, $slider-background-color 170px, $slider-background-color);
     height: 631px;
-    background: linear-gradient(180deg, $background-color 0, $background-color 169px, $slider-background-color 170px, $slider-background-color 170px);
+    padding-left: 45px;
   }
 
   .slide__image-before {
@@ -122,5 +125,26 @@
     @include margin-left-right(0);
     width: 650px;
     margin-right: -40px;
+  }
+
+  .slide__before,
+  .slide__after {
+    padding-left: 0;
+    height: 652px;
+    margin-top: -21px;
+    // margin-left: -40px;
+  }
+
+  .slide__before {
+    background: linear-gradient(180deg, $background-color 0, $background-color 191px, $add-background-color 192px, $add-background-color);
+  }
+
+  .slide__after {
+    background: linear-gradient(180deg, $background-color 0, $background-color 191px, $slider-background-color 192px, $slider-background-color);
+  }
+
+  .slide__image-before,
+  .slide__image-after {
+    margin-left: -40px;
   }
 }
