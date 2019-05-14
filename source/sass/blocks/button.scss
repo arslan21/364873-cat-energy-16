@@ -9,6 +9,14 @@
   border: 0;
   padding: 0;
 
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--preview {
     margin-top: 5px;
     font-size: 14px;
