@@ -31,6 +31,14 @@
   &--card-plus {
     background-color: $add-background-color;
     color: $main-font-color;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--card-other {
