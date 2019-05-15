@@ -98,6 +98,10 @@
       margin-top: 13px;
       margin-bottom: 12px;
       margin-left: 46px;
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     & + p::before,
@@ -114,6 +118,10 @@
       transform: translate(0, -50%);
       border: 1px solid $border-color;
       background-color: transparent;
+    }
+
+    & + p:hover::before {
+      border: 1px solid #bababa;
     }
 
     // & + p::after {
