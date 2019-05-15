@@ -22,35 +22,32 @@
   }
 }
 
-.form__contacts > .form__label--text {
+.form__label--email,
+.form__label--phone {
   position: relative;
 
-  &::after {
-    content: "";
-    display: block;
+  & .icon {
     position: absolute;
+    fill: $label-font-color;
     top: 50%;
     right: 0;
   }
 
-  &.form__label--email::after {
-    width: 17px;
-    height: 13px;
-    background-image: url("../../img/icon-mail.svg");
-    transform: translate(-35px, -50%);
-  }
-
-  &.form__label--phone::after {
-    width: 20px;
-    height: 20px;
-    background-image: url("../../img/icon-phone.svg");
-    transform: translate(-32px, -50%);
+  & .form__input:focus + .icon,
+  & .form__input:active + .icon {
+    fill: $main-color;
   }
 }
-//
-// .form__label--email,
-// .form__label--phone {
-// }
+
+.form__label--email .icon {
+  @include size(17px, 13px);
+  transform: translate(-35px, -50%);
+}
+
+.form__label--phone .icon {
+  @include size(20px, 20px);
+  transform: translate(-32px, -50%);
+}
 
 .form__input {
   &--text,
@@ -170,14 +167,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form__contacts > .form__label--text {
-    &.form__label--email::after {
-      transform: translate(-86px, -50%);
-    }
+  .form__label--email .icon {
+    transform: translate(-86px, -50%);
+  }
 
-    &.form__label--phone::after {
-      transform: translate(-83px, -50%);
-    }
+  .form__label--phone .icon {
+    transform: translate(-83px, -50%);
   }
 
   .form__registration .form__label--text {
