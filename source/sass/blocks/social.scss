@@ -23,11 +23,24 @@
   @include size(100%, 100%);
   @include flex(row, center, center, wrap);
   overflow: visible;
+
+  &:hover {
+    fill: $main-color;
+    stroke: $main-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__link-image--mobile {
+  // @include size(auto, auto);
+  background-color: inherit;
 }
 
 .social__link-image {
-  // @include size(auto, auto);
-  background-color: inherit;
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -39,5 +52,14 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .social__link-image--mobile {
+    // @include size(auto, auto);
+    display: none;
+  }
+
+  .social__link-image {
+    display: block;
   }
 }
