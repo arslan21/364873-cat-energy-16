@@ -64,6 +64,14 @@
 
   .page-footer__logo {
     @include size(128px, 24px);
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-footer__social {
