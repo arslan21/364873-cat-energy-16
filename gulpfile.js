@@ -18,6 +18,10 @@ var webp = require("gulp-webp");
 var uglify = require("gulp-uglify");
 
 var svgstore = require("gulp-svgstore");
+var cheerio = require('gulp-cheerio');
+var replace = require('gulp-replace');
+
+var inject = require('gulp-inject');
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
@@ -104,12 +108,28 @@ gulp.task("clean", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
+  var svgs = gulp.src("source/img/icon-*.svg")
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('style').remove();
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(replace('&gt;', '>'))
     .pipe(svgstore ({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
+  function fileContents (filePath, file) {
+    return file.contents.toString();
+  }
+  return gulp.src('source/*.html')
+    .pipe(inject(svgs, {
+      starttag: '<!-- inject:svg --> ',
+      transform: fileContents }))
+    .pipe(gulp.dest("source"));
 });
 
 gulp.task("html", function () {
