@@ -22,8 +22,6 @@ var cheerio = require('gulp-cheerio');
 var replace = require('gulp-replace');
 
 var inject = require('gulp-inject');
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
 
 var server = require("browser-sync").create();
 
