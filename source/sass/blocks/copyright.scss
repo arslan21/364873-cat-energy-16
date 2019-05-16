@@ -36,7 +36,8 @@
   }
 
   &:last-child {
-    margin-right: -2px;
+    margin-right: -6px;
+    margin-top: 3px;
   }
 }
 
@@ -62,7 +63,7 @@
 
 @media (min-width: $tablet-width) {
   .copyright {
-    padding-top: 1px;
+    padding-top: 17px;
     padding-bottom: 0;
   }
 
@@ -70,6 +71,9 @@
   .copyright__list {
     width: auto;
     height: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .copyright__item {
@@ -78,21 +82,20 @@
     }
 
     &:last-child {
-      margin-right: -3px;
+      margin-right: -7px;
+      margin-top: 0px;
+      margin-left: 15px;
     }
   }
 
   .copyright__image-block {
-    margin-left: 18px;
+    margin: 0;
+
     width: 41px;
     height: 41px;
   }
-
-
 }
 
 @media (min-width: $desktop-width) {
-  .copyright {
-    padding-top: 4px;
-  }
+
 }

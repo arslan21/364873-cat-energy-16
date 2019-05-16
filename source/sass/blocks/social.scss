@@ -3,16 +3,21 @@
   @include flex(row, center, stretch, wrap);
   width: 100%;
   height: 100%;
+  padding-top: 4px
 }
 
 .social__item {
-  margin-right: 35px;
+  margin-right: 38px;
   margin-top: auto;
   margin-bottom: auto;
-  // width: 22px;
-  // height: 22px;
   height: 19px;
   width: 22px;
+  display: flex;
+  justify-content: flex-start;
+
+  &:nth-child(2) {
+    width: 18px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -23,6 +28,7 @@
   @include size(100%, 100%);
   @include flex(row, center, center, wrap);
   overflow: visible;
+  width: auto;
 
   &:hover {
     fill: $main-color;
@@ -47,7 +53,13 @@
   .social__item {
     width: 30px;
     height: 30px;
-    margin-right: 30px;
+    margin-right: 28px;
+
+    // text-align: left;
+
+    &:nth-child(2) {
+      width: 23px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -55,7 +67,6 @@
   }
 
   .social__link-image--mobile {
-    // @include size(auto, auto);
     display: none;
   }
 
