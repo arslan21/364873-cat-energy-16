@@ -48,6 +48,7 @@
 
 .slide__text {
   @include font-color-size($title-font-color, uppercase, $button-font-size, $weight-regular, 20px);
+  display: inline-block;
   width: 118px;
   margin: 0;
   border: 0;
