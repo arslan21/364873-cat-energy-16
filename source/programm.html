@@ -208,17 +208,17 @@
 
         <div class="form__registration">
           <h3 class="form__block-title visualy-hidden">Регистрационные данные</h3>
-          <label for="name" class="form__label form__label--text"><p>Имя:<sup>*</sup></p><input type="text" class="form__input form__input--text" id="name" name="name" placeholder="Барсик" size="5" required></label>
-          <label for="weight" class="form__label form__label--text"><p>Вес (кг):<sup>*</sup></p><input type="text" class="form__input form__input--text" id="weight" name="weight" placeholder="7" size="2" required></label>
-          <label for="age" class="form__label form__label--text"><p>Возраст (лет):</p><input type="text" class="form__input form__input--text" id="age" name="age" placeholder="7" size="2"></label>
+          <label for="name" class="form__label form__label--text">Имя:<sup>*</sup><input type="text" class="form__input form__input--text" id="name" name="name" placeholder="Барсик" size="5" required></label>
+          <label for="weight" class="form__label form__label--text">Вес (кг):<sup>*</sup><input type="text" class="form__input form__input--text" id="weight" name="weight" placeholder="7" size="2" required></label>
+          <label for="age" class="form__label form__label--text">Возраст (лет):<input type="text" class="form__input form__input--text" id="age" name="age" placeholder="7" size="2"></label>
         </div>
 
         <div class="form__type">
           <div class="form__type-wraper">
             <h3 class="form__block-title visualy-hidden">Тип программы</h3>
-            <label for="weight-down" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-down" name="programm-type" value="weight-down"><p>Похудение</p></label>
-            <label for="weight-up" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-up" name="programm-type" value="weight-up"><p>Набор массы</p></label>
-            <label for="weight-advice" class="form__label form__label--radio"><input type="radio" class="form__input form__input--radio" id="weight-advice" name="programm-type" value="weight-advice"><p>Не знаю (Нужен ваш совет)</p></label>
+            <input type="radio" class="form__input form__input--radio" id="weight-down" name="programm-type" value="weight-down"><label for="weight-down" class="form__label form__label--radio">Похудение</label>
+            <input type="radio" class="form__input form__input--radio" id="weight-up" name="programm-type" value="weight-up"><label for="weight-up" class="form__label form__label--radio">Набор массы</label>
+            <input type="radio" class="form__input form__input--radio" id="weight-advice" name="programm-type" value="weight-advice"><label for="weight-advice" class="form__label form__label--radio">Не знаю (Нужен ваш совет)</label>
           </div>
         </div>
 
@@ -226,14 +226,14 @@
           <h3 class="form__block-title title-line form__block-title--contacts"><span>Контактные данные (владельца кота)</span></h3>
           <div class="form__contacts-wraper">
             <label for="email" class="form__label form__label--text form__label--email">
-              <p>e-mail:<sup>*</sup></p>
+              e-mail:<sup>*</sup>
               <input type="email" class="form__input form__input--text" id="email" name="email" placeholder="kuklachev@gmail.com" size="11" required>
               <svg class="icon" width="17" height="13">
                 <use xlink:href="#icon-mail" />
               </svg>
             </label>
             <label for="phone" class="form__label form__label--text form__label--phone">
-              <p>Телефон:<sup>*</sup></p>
+              Телефон:<sup>*</sup>
               <input type="tel" pattern="8[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" class="form__input form__input--text" id="phone" name="phone" placeholder="8 (960) 900-60-90" size="11" required>
               <svg class="icon" width="20" height="20">
                 <use xlink:href="#icon-phone" />
@@ -253,10 +253,10 @@
         <div class="form__additional title-line">
           <h3 class="form__block-title form__block-title--additional title-line"><span>Дополнительно</span></h3>
           <div class="form__additional-wraper">
-            <label for="sugar" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="sugar" name="programm-additional" value="sugar"><p>Сахорозаменитель</p></label>
-            <label for="water" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="water" name="programm-additional" value="water"><p>Вода</p></label>
-            <label for="milk" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="milk" name="programm-additional" value="milk"><p>Молоко</p></label>
-            <label for="vitamin" class="form__label form__label--checkbox"><input type="checkbox" class="form__input form__input--checkbox" id="vitamin" name="programm-additional" value="vitamin"><p>Витамины</p></label>
+            <input type="checkbox" class="form__input form__input--checkbox" id="sugar" name="programm-additional" value="sugar"><label for="sugar" class="form__label form__label--checkbox">Сахорозаменитель</label>
+            <input type="checkbox" class="form__input form__input--checkbox" id="water" name="programm-additional" value="water"><label for="water" class="form__label form__label--checkbox">Вода</label>
+            <input type="checkbox" class="form__input form__input--checkbox" id="milk" name="programm-additional" value="milk"><label for="milk" class="form__label form__label--checkbox">Молоко</label>
+            <input type="checkbox" class="form__input form__input--checkbox" id="vitamin" name="programm-additional" value="vitamin"><label for="vitamin" class="form__label form__label--checkbox">Витамины</label>
           </div>
         </div>
         <div class="form__button-wraper">

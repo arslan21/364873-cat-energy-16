@@ -30,6 +30,11 @@
   padding-bottom: 26px;
 }
 
+.form__type-wraper {
+  width: $mobile-width - (2 * $main-padding-mobile);
+  @include margin-left-right(auto);
+}
+
 .form__contacts {
   & .form__input--text {
     margin-left: 12px;
@@ -94,6 +99,11 @@
   padding-bottom: 26px;
 }
 
+.form__additional-wraper {
+  width: $mobile-width - (2 * $main-padding-mobile);
+  @include margin-left-right(auto);
+}
+
 @media (min-width: $tablet-width) {
   .form {
     padding-top: 41px;
@@ -132,7 +142,7 @@
   .form__additional-wraper {
     @include flex(row, flex-start, stretch, wrap);
     @include margin-left-right(auto);
-    @include padding-left-right(41px);
+    @include padding-left-right(71px);
     width: $tablet-width;
     // width: $tablet-width;
     // padding-left: 70px;
