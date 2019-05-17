@@ -31,7 +31,6 @@
 }
 
 .card__title {
-  @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
   font-family: $oswald;
 
   &--main,
@@ -56,6 +55,20 @@
 
   &--other {
     height: 29px;
+  }
+}
+
+.card__link {
+  @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
+  @include link-style;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -101,6 +114,10 @@
 
 .button--card-other {
   margin-top: -3px;
+}
+
+.card__br--tablet {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -167,7 +184,6 @@
 
   .card__title {
     @include margin-left-right(38px);
-    font-size: 20px;
     // @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
     margin-bottom: 20px;
 
@@ -190,6 +206,10 @@
       @include margin-left-right(0);
       margin-top: 18px;
     }
+  }
+
+  .card__link {
+    font-size: 20px;
   }
 
   .card__button {
@@ -218,6 +238,14 @@
   .card__slogan--plus {
     @include padding-left-right(78px);
     font-size: 16px;
+  }
+
+  .card__br--mobile {
+    display: none;
+  }
+
+  .card__br--tablet {
+    display: block;
   }
 }
 
