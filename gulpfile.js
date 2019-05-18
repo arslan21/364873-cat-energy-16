@@ -115,6 +115,8 @@ gulp.task("sprite", function () {
       parserOptions: { xmlMode: true }
     }))
     .pipe(replace('&gt;', '>'))
+    .pipe(replace('\n', ''))
+    // .pipe(replace('></svg>', '>\n</svg>'))
     .pipe(svgstore ({
       inlineSvg: true
     }))
@@ -130,15 +132,6 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("source"));
 });
 
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml(
-      include()
-    ))
-    .pipe(gulp.dest("source"));
-});
-
-
-gulp.task("build", gulp.series("clean", "copy", "css", "uglify"));
+gulp.task("build", gulp.series("clean", "uglify", "css", "copy"));
 gulp.task("start", gulp.series("build", "server"));
 gulp.task("imagesopimize", gulp.series("images", "webp"));
