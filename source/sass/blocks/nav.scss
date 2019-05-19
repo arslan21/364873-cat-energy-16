@@ -40,13 +40,6 @@
   border-bottom: 1px solid $border-color;
   background-color: transparent;
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .nav__link {
@@ -54,6 +47,14 @@
   @include link-style();
   @include flex(column, center, center, wrap);
   width: 100%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
   // min-height: 65px;
 }
 
@@ -99,7 +100,7 @@
   }
 
   .nav__link {
-    height: 100%;
+    // height: 100%;
   }
 
   .nav__link-text {
@@ -113,8 +114,9 @@
     content: "";
     position: absolute;
     display: block;
-    bottom: -10px;
-    width: 100%;
+    bottom: -11px;
+    left: 2%;
+    width: 96%;
     height: 2px;
     background-color: $main-color;
   }
@@ -141,12 +143,6 @@
   }
 
   .nav__item--active .nav__link-text--index::after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: -10px;
-    width: 100%;
-    height: 2px;
     background-color: $background-color;
   }
 }
