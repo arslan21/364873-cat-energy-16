@@ -14,8 +14,8 @@
   @include margin-left-right(auto);
   @include flex(row, flex-start, baseline, nowrap);
   width: $mobile-width - (2 * $main-padding-mobile);
-  padding-top: 28px;
-  padding-bottom: 12px;
+  padding-top: 26px;
+  padding-bottom: 10px;
 }
 
 .contacts__title {
