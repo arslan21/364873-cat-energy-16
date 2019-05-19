@@ -1,7 +1,7 @@
 .form {
   @include flex(column, flex-start, center, nowrap);
   width: 100%;
-  padding-top: 23px;
+  padding-top: 6px;
 
   &__registration,
   &__type,
@@ -13,8 +13,8 @@
 }
 
 .form__registration {
-  padding-top: 1px;
-  padding-bottom: 12px;
+  padding-top: 20px;
+  padding-bottom: 24px;
   width: 100%;
 
   & > * {
@@ -23,11 +23,11 @@
 }
 
 .form__type {
-  padding-top: 12px;
+  padding-top: 20px;
   // @include flex(column, flex-start, center, nowrap);
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
-  padding-bottom: 26px;
+  padding-bottom: 20px;
 }
 
 .form__type-wraper {
@@ -67,21 +67,18 @@
 
   &--contacts {
     height: 78px;
-
-    p {
-      width: 70%;
-    }
+    margin-top: 28px;
+    margin-bottom: 4px;
   }
 
   &--comment {
-    // margin-top: 17px;
-    // margin-bottom: 0;
+    margin-top: 28px;
   }
 
   &--additional {
     height: 51px;
-    // margin-top: 18px;
-    // margin-bottom: 0;
+    margin-top: 18px;
+    margin-bottom: 8px;
   }
 
   // .form__comment .form__block-title--comment {
@@ -280,16 +277,17 @@
 
 @media (min-width: $tablet-width) {
   .form {
-    padding-top: 41px;
+    padding-top: 20px;
   }
 
   .form__registration {
-    padding-top: 0;
+    padding-top: 24px;
   }
 
   .form__type {
     border: 0;
-    padding-top: 44px;
+    padding-top: 28px;
+    margin-top: 21px;
   }
 
   .form__type-wraper {
@@ -301,8 +299,12 @@
     // padding-right: 67px;
     border: 1px solid $border-color;
     // opacity: 0.5;
-    padding-top: 17px;
-    padding-bottom: 18px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .form__contacts {
+    padding-bottom: 20px;
   }
 
   .form__comment-wraper {
@@ -310,14 +312,17 @@
     width: $tablet-width;
   }
 
-  // .form__additional {
-  // }
+  .form__additional {
+    padding-bottom: 0;
+  }
 
   .form__additional-wraper {
-    @include flex(row, flex-start, stretch, wrap);
+    @include flex(row, space-between, stretch, wrap);
     @include margin-left-right(auto);
     @include padding-left-right(71px);
     width: $tablet-width;
+    padding-top: 20px;
+    padding-bottom: 20px;
     // width: $tablet-width;
     // padding-left: 70px;
     // padding-right: 67px;
@@ -330,6 +335,7 @@
     padding-left: 70px;
     padding-right: 67px;
     margin-bottom: 72px;
+    padding-top: 1px;
   }
 
 
@@ -339,15 +345,17 @@
     margin-top: 48px;
 
     &--contacts {
-      margin-bottom: 31px;
+      margin-top: 54px;
+      margin-bottom: 35px;
     }
 
     &--comment {
+      margin-top: 44px;
       margin-bottom: 54px;
     }
 
     &--additional {
-      margin-bottom: 40px;
+      margin-bottom: 23px;
     }
 
 
@@ -468,6 +476,7 @@
   //form__label form__input styles end
 }
 
+
 @media (min-width: $desktop-width) {
   .form {
     @include flex(row, center, stretch, wrap);
@@ -525,12 +534,20 @@
 
   .form__block-title {
     margin-top: 40px;
+
+    &--contacts {
+      margin-top: 45px;
+    }
+
+    &--comment {
+      margin-top: 23px;
+    }
   }
 
   .form__button-wraper {
     @include padding-left-right($main-padding-desktop);
     width: $desktop-width;
-    margin-top: 24px;
+    margin-top: 6px;
     margin-bottom: 84px;
   }
 
