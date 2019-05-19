@@ -121,7 +121,7 @@
     justify-content: center;
     z-index: 3;
     position: absolute;
-    bottom: 39px;
+    bottom: 35px;
     width: 100%;
   }
 
@@ -180,5 +180,9 @@
   .slide__image-before,
   .slide__image-after {
     margin-left: -40px;
+  }
+
+  .slide__slider-block {
+    bottom: 37px;
   }
 }

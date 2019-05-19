@@ -91,6 +91,7 @@
     @include padding-left-right($main-padding-tablet);
     background-color: $background-color;
     width: 100%;
+    border-top: 1px solid $border-color;
   }
 
   .example__desk {
@@ -108,7 +109,7 @@
     width: 100%;
     // width: $tablet-width - (2 * $main-padding-tablet);
     // font-family: $oswald;
-    margin-top: 20px;
+    margin-top: 43px;
     margin-bottom: 40px;
   }
 
@@ -184,6 +185,7 @@
     @include padding-left-right($main-padding-desktop);
     position: relative;
     background-color: transparent;
+    border: 0;
   }
 
   .example__background__desk {
@@ -207,7 +209,7 @@
     @include margin-left-right(0);
     width: 450px;
     display: block;
-    padding-top: 22px;
+    padding-top: 18px;
   }
 
   .example__title {
@@ -240,7 +242,8 @@
   }
 
   .example__slide {
-    margin-top: 22px;
+    padding-top: 22px;
+    margin-top: 0;
     // width: $tablet-width - (2 * $main-padding-tablet);
   }
 
