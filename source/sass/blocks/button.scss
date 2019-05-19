@@ -1,6 +1,9 @@
 .button {
-  @include flex(column, center,center, nowrap);
-  @include size(280px, 40px);
+  // @include flex(column, center,center, nowrap);
+  display: block;
+  // @include size(280px, 40px);
+  width: 280px;
+  min-height: 40px;
   @include margin-left-right($main-padding-mobile);
   @include link-style;
   @include font-color-size($contrast-font-color, uppercase, $button-font-size, $weight-regular, 20px);
@@ -8,6 +11,8 @@
   background-color: $main-color;
   border: 0;
   padding: 0;
+  word-wrap: break-word;
+  text-align: center;
 
   &:hover {
     background-color: $button-hover-color;
@@ -18,9 +23,11 @@
   }
 
   &--preview {
-    margin-top: 5px;
+    margin-top: 3px;
+    padding-top: 9px;
     font-size: 14px;
     line-height: 18px;
+
   }
 
   &--card,
@@ -53,7 +60,8 @@
 @media (min-width: $tablet-width) {
   .button {
     @include font-color-size($contrast-font-color, uppercase, 16px, $weight-regular, 20px);
-    @include size(245px, 52px);
+    width: 245px;
+    min-height: 52px;
     font-family: $oswald;
     margin-top: 20px;
 
@@ -64,6 +72,10 @@
 
   .button--preview {
     @include margin-left-right(0);
+    font-size: 20px;
+    padding-top: 16px;
+    padding-left: 0;
+
   }
 
 
@@ -71,7 +83,7 @@
   .button--card-plus {
     @include margin-left-right($card-padding-tablet);
     width: 100%;
-    height: 40px;
+    min-height: 40px;
     // @include size(249px, 40px);
   }
 
