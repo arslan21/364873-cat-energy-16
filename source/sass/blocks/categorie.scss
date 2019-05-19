@@ -143,8 +143,13 @@
 
   .categorie__description {
     @include font-color-size($main-font-color, none, 16px, $weight-regular, 24px);
+    margin-top: 3px;
     border-bottom: 0;
     margin-bottom: 34px;
+  }
+
+  .categorie__card:first-child .categorie__description {
+    width: 368px;
   }
 
   .categorie__link {
@@ -162,7 +167,7 @@
     order: 1;
     margin-left: auto;
     margin-right: 41px;
-    margin-top: 92px;
+    margin-top: 89px;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle r="100" cx="50%25" cy="50%25" fill="%2368b738"%3E%3C/circle%3E/%3E%3C/svg%3E');
   }
 
@@ -219,7 +224,8 @@
     margin-top: 74px;
   }
 
-  .categorie__description {
+  .categorie__card .categorie__description,
+  .categorie__card:first-child .categorie__description {
     width: 100%;
     padding-right: 6px;
     padding-bottom: 0;
