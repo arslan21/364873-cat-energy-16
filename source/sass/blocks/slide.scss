@@ -1,7 +1,4 @@
 .slide {
-  // position: relative;
-  // width: $mobile-width;
-  // @include margin-left-right(auto);
   overflow: hidden;
   margin-left: -($main-padding-mobile);
 }
@@ -15,7 +12,6 @@
 }
 
 .slide__before {
-  // width: 100%;
   position: absolute;
   background-color: $add-background-color;
   z-index: 2;
@@ -86,7 +82,6 @@
   .slide {
     position: relative;
     width: calc(100% + 60px);
-    // width: $tablet-width;
     margin-left: -($main-padding-tablet);
   }
 
@@ -143,12 +138,10 @@
     }
 
     &--before {
-      // text-align: right;
       padding-right: 24px;
     }
 
     &--after {
-      // text-align: left;
       padding-left: 20px;
     }
   }
@@ -166,7 +159,6 @@
     padding-left: 0;
     height: 652px;
     margin-top: -21px;
-    // margin-left: -40px;
   }
 
   .slide__before {

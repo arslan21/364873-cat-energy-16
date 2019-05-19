@@ -24,7 +24,6 @@
 
 .form__type {
   padding-top: 20px;
-  // @include flex(column, flex-start, center, nowrap);
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   padding-bottom: 20px;
@@ -43,20 +42,13 @@
 
 .form__comment,
 .form__additional {
-  // @include padding-left-right($main-padding-mobile);
-  // @include flex(column, flex-start, center, nowrap);
 
   & > * {
     @include margin-left-right(auto);
   }
 }
-//
-// .form__registration,
-// .form__contacts {
-// }
 
 .form__block-title {
-  // width: $mobile-width;
   @include margin-left-right(auto);
   @include font-color-size($title-font-color, none, 24px, $weight-regular, 1em);
   text-align: left;
@@ -81,18 +73,12 @@
     margin-bottom: 8px;
   }
 
-  // .form__comment .form__block-title--comment {
-  //   margin-top: -12px;
-  //
-  // }
-
   &.title-line {
     @include title-with-line($background-color, $main-color);
   }
 }
 
 .form__additional {
-  // @include flex(column, flex-start, center, nowrap);
   padding-bottom: 26px;
 }
 
@@ -293,12 +279,7 @@
   .form__type-wraper {
     @include margin-left-right(auto);
     width: $tablet-width - 71px - 67px;
-
-    // width: $tablet-width;
-    // padding-left: 72px;
-    // padding-right: 67px;
     border: 1px solid $border-color;
-    // opacity: 0.5;
     padding-top: 24px;
     padding-bottom: 24px;
   }
@@ -323,9 +304,6 @@
     width: $tablet-width;
     padding-top: 20px;
     padding-bottom: 20px;
-    // width: $tablet-width;
-    // padding-left: 70px;
-    // padding-right: 67px;
   }
 
   .form__button-wraper {
@@ -383,7 +361,6 @@
   }
 
   .form__registration .form__label--text {
-    // margin-bottom: 12px;
 
     &:first-of-type input {
       margin-left: 18px;
@@ -485,18 +462,14 @@
   .form__registration,
   .form__type {
     width: ($desktop-width - (2 * 40px) - (2 * $main-padding-desktop)) / 2;
-    // width: auto;
-    // flex-shrink: 0;
   }
 
   .form__registration {
-    // margin-left: $main-padding-desktop;
     margin-left: auto;
     margin-right: 80px;
   }
 
   .form__type {
-    // margin-right: $main-padding-desktop;
     margin-right: auto;
     padding: 0;
     padding-top: 4px;

@@ -11,7 +11,6 @@
 
 @mixin slider-thumb-tablet {
   box-sizing: border-box;
-  // box-sizing: content-box;
   appearance: none;
   height: 34px;
   width: 34px;
@@ -20,7 +19,6 @@
   background-color: $background-color;
   border-radius: 50%;
   cursor: pointer;
-  // @include margin-left-right(4px);
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle r="4" cx="50%25" cy="50%25" fill="%2368b738"%3E%3C/circle%3E/%3E%3C/svg%3E');
   background-position: center;
 

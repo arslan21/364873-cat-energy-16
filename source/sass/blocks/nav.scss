@@ -34,7 +34,6 @@
 
 .nav__item {
   @include flex(column, center, center, wrap);
-  // @include padding-left-right($main-padding-mobile);
   width: 100%;
   min-height: 66px;
   border-bottom: 1px solid $border-color;
@@ -43,7 +42,6 @@
 }
 
 .nav__link {
-  // display: block;
   @include link-style();
   @include flex(column, center, center, wrap);
   width: 100%;
@@ -55,7 +53,6 @@
   &:active {
     opacity: 0.3;
   }
-  // min-height: 65px;
 }
 
 .nav__link-text {
@@ -97,10 +94,6 @@
     &:last-child {
       padding-right: 0;
     }
-  }
-
-  .nav__link {
-    // height: 100%;
   }
 
   .nav__link-text {

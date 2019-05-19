@@ -1,8 +1,6 @@
 .copyright {
-  // @include flex(row, space-between, baseline, row);
   padding-bottom: 8px;
 }
-
 
 .copyright__link {
   @include link-style;
@@ -56,9 +54,6 @@
 .copyright__image {
   width: 60px;
   height: 60px;
-  // stroke: #000000;
-  // fill: #000000;
-
 }
 
 @media (min-width: $tablet-width) {
@@ -66,7 +61,6 @@
     padding-top: 14px;
     padding-bottom: 0;
   }
-
 
   .copyright__list {
     width: auto;
@@ -90,12 +84,7 @@
 
   .copyright__image-block {
     margin: 0;
-
     width: 41px;
     height: 41px;
   }
-}
-
-@media (min-width: $desktop-width) {
-
 }

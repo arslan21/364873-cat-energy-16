@@ -41,7 +41,6 @@
     @include margin-left-right(auto);
     @include padding-left-right($main-padding-tablet);
     width: $tablet-width;
-    // min-height: 110px;
   }
 
   .page-header__title {
@@ -63,21 +62,17 @@
   }
 
   .page-header__nav {
-    // width: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    // align-items: flex-end;
     @include padding-left-right($main-padding-desktop);
     width: $desktop-width;
-    // min-height: 110px;
   }
 
   .page-header__title {
     width: 202px;
-    // @include padding-left-right($main-padding-mobile);
     height: 58px;
   }
 

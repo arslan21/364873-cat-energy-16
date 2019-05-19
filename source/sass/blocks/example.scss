@@ -42,8 +42,6 @@
   @include flex(column, center, center, wrap);
   position: relative;
   background-color: inherit;
-  // min-width: 124px;
-  // min-height: 56px;
   width: 124px;
   height: 56px;
   border-radius: 3px;
@@ -62,7 +60,6 @@
   background-color: $add-background-color;
   position: absolute;
   left: 50%;
-  // bottom: 0;
   top: 12px;
   transform: translate(-50%, 24px);
   text-align: center;
@@ -83,7 +80,6 @@
 .example__slide {
   margin-top: 20px;
   width: $mobile-width;
-  // @include margin-left-right(auto);
 }
 
 @media (min-width: $tablet-width) {
@@ -101,21 +97,17 @@
   .example__wrapper {
     @include flex(row, space-between, stretch, wrap);
     width: $tablet-width - (2 * $main-padding-tablet);
-    // width: 100%;
   }
 
   .example__title {
     @include font-color-size($title-font-color, none, $title-font-size-tablet, $weight-regular, 60px);
     width: 100%;
-    // width: $tablet-width - (2 * $main-padding-tablet);
-    // font-family: $oswald;
     margin-top: 43px;
     margin-bottom: 40px;
   }
 
   .example__description {
     @include font-color-size($main-font-color, none, $main-font-size-tablet, $weight-regular, 24px);
-    // width: $tablet-width - (2 * $main-padding-tablet);
     width: 100%;
     margin-top: 24px;
     margin-bottom: 24px;
@@ -151,7 +143,6 @@
     line-height: 1em;
     margin-top: 26px;
     margin-bottom: 0;
-    // min-width: 120px;
   }
 
   .example__progress--weight .example__progres-title {
@@ -176,7 +167,6 @@
 
   .example__slide {
     margin-top: 51px;
-    // width: $tablet-width - (2 * $main-padding-tablet);
   }
 }
 
@@ -189,14 +179,12 @@
   }
 
   .example__background__desk {
-    // background: linear-gradient(90deg, $add-background-color 0%, $slider-background-color 100%);
     background: linear-gradient(90deg, $add-background-color 72.57%, $slider-background-color 72.57%);
     position: absolute;
     width: 100%;
     height: 462px;
     top: 192px;
     left: 0;
-    // z-index: -1;
   }
 
   .example__desk {
@@ -244,7 +232,6 @@
   .example__slide {
     padding-top: 22px;
     margin-top: 0;
-    // width: $tablet-width - (2 * $main-padding-tablet);
   }
 
   .example__progres-title {

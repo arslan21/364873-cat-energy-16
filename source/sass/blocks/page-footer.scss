@@ -1,6 +1,5 @@
 .page-footer {
   width: 100%;
-  // @include flex(column, center, center, nowrap);
   @include padding-left-right($main-padding-mobile);
   background-color: $add-background-color;
 }
@@ -71,7 +70,6 @@
   }
 
   .page-footer__item {
-    // @include flex(row, center, center, wrap);
     border: 0;
     width: 33%;
     min-height: 62px;

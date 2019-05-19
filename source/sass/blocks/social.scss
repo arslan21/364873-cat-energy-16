@@ -41,7 +41,6 @@
 }
 
 .social__link-image--mobile {
-  // @include size(auto, auto);
   background-color: inherit;
 }
 
@@ -54,8 +53,6 @@
     width: 30px;
     height: 30px;
     margin-right: 28px;
-
-    // text-align: left;
 
     &:nth-child(2) {
       width: 23px;
