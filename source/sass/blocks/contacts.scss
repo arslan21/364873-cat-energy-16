@@ -112,7 +112,7 @@
   }
 
   .contacts__br-tablet {
-    display:inline;
+    display: inline;
   }
 }
 
@@ -145,6 +145,7 @@
   .contacts__map-block {
     height: 399px;
     background-image: url("../../img/bg-map-desktop@1x.png");
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/bg-map-desktop@2x.png");
     }

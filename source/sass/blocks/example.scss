@@ -159,10 +159,10 @@
     text-align: right;
     padding-top: 15px;
     margin-top: 21px;
+  }
 
-    & span {
-      display: block;
-    }
+  .example__cost span {
+    display: block;
   }
 
   .example__slide {
@@ -222,11 +222,11 @@
     padding-top: 0;
     margin-top: 56px;
     margin-bottom: 0;
+  }
 
-    & span {
-      display: inline-block;
-      margin-left: 63px;
-    }
+  .example__cost span {
+    display: inline-block;
+    margin-left: 63px;
   }
 
   .example__slide {

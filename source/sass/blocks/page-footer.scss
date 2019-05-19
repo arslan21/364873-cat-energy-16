@@ -1,6 +1,6 @@
 .page-footer {
-  width: 100%;
   @include padding-left-right($main-padding-mobile);
+  width: 100%;
   background-color: $add-background-color;
 }
 
@@ -58,8 +58,8 @@
     @include padding-left-right(0);
     @include flex(row, center, stretch, nowrap);
     min-height: 150px;
-    margin-top: 0px;
-    padding-top: 0px;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .page-footer__list {
@@ -86,7 +86,6 @@
 
   .page-footer__logo {
     @include size(128px, 24px);
-
   }
 
   .page-footer__social {

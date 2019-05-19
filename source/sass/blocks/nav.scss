@@ -38,7 +38,6 @@
   min-height: 66px;
   border-bottom: 1px solid $border-color;
   background-color: transparent;
-
 }
 
 .nav__link {
@@ -77,7 +76,6 @@
   .nav__toggle {
     display: none;
   }
-
 
   .nav__list {
     @include flex(row, flex-end, stretch, wrap);

@@ -60,9 +60,6 @@
   .page-header__image {
     @include size(173px, 58px);
   }
-
-  .page-header__nav {
-  }
 }
 
 @media (min-width: $desktop-width) {
