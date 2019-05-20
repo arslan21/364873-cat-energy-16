@@ -1,0 +1,167 @@
+@mixin slider-thumb-mobile {
+  box-sizing: border-box;
+  appearance: none;
+  height: 6px;
+  width: 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: $main-color;
+  cursor: pointer;
+}
+
+@mixin slider-thumb-tablet {
+  box-sizing: border-box;
+  appearance: none;
+  height: 34px;
+  width: 34px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid $add-background-color;
+  background-color: $background-color;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle r="4" cx="50%25" cy="50%25" fill="%2368b738"%3E%3C/circle%3E/%3E%3C/svg%3E');
+  background-position: center;
+
+  &:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid $main-color;
+  }
+}
+
+@mixin slider-track-mobile {
+  @include margin-left-right(-4px);
+  box-sizing: border-box;
+  height: 14px;
+  border-radius: 6px;
+  border: 1px solid $border-color;
+  background-color: $background-color;
+  cursor: pointer;
+}
+
+@mixin slider-track-tablet {
+  @include margin-left-right(0);
+  box-sizing: border-box;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $border-color;
+  cursor: pointer;
+}
+
+.slide__slider {
+  @include padding-left-right(0);
+  appearance: none;
+  width: 76px;
+  background-color: transparent;
+  height: 12px;
+  border-radius: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.slide__slider::-webkit-slider-thumb {
+  @include slider-thumb-mobile;
+  margin-top: 3px;
+}
+
+/* All the same stuff for Firefox */
+.slide__slider::-moz-range-thumb {
+  @include slider-thumb-mobile;
+}
+
+/* All the same stuff for IE */
+.slide__slider::-ms-thumb {
+  @include slider-thumb-mobile;
+}
+
+.slide__slider::-webkit-slider-runnable-track {
+  @include slider-track-mobile;
+  @include padding-left-right(4px);
+}
+
+.slide__slider::-moz-range-track {
+  @include slider-track-mobile;
+  @include padding-left-right(4px);
+}
+//IE
+.slide__slider::-ms-track {
+  @include slider-track-mobile;
+  @include padding-left-right(4px);
+  border: 0;
+  border-radius: 10px;
+  color: transparent;
+}
+
+.slide__slider::-moz-range-progress {
+  background: #68b738;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.slide__slider::-ms-fill-lower {
+  background: #68b738;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 6px;
+  margin-left: 5px;
+}
+//IE
+.slide__slider::-ms-fill-upper {
+  background: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .slide__slider {
+    appearance: none;
+    width: 428px;
+    background-color: transparent;
+  }
+
+  .slide__slider::-webkit-slider-thumb {
+    @include slider-thumb-tablet;
+    margin-top: -11px;
+  }
+
+  /* All the same stuff for Firefox */
+  .slide__slider::-moz-range-thumb {
+    @include slider-thumb-tablet;
+  }
+
+  /* All the same stuff for IE */
+  .slide__slider::-ms-thumb {
+    @include slider-thumb-tablet;
+  }
+
+  .slide__slider::-webkit-slider-runnable-track {
+    @include slider-track-tablet;
+  }
+
+  .slide__slider::-moz-range-track {
+    @include slider-track-tablet;
+  }
+
+  .slide__slider::-ms-track {
+    @include slider-track-tablet;
+  }
+
+  .slide__slider::-moz-range-progress {
+    background: #dcdcdc;
+  }
+
+  .slide__slider::-ms-fill-lower {
+    background: #dcdcdc;
+  }
+
+  .slide__slider::-ms-fill-upper {
+    background: #dcdcdc;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slide__slider {
+    width: 454px;
+  }
+}

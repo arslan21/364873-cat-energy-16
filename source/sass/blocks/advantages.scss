@@ -80,7 +80,7 @@
 .advantages__description {
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   font-family: $arialmt;
-  width: auto;
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   word-wrap: break-word;
@@ -90,12 +90,14 @@
   .advantages {
     @include padding-left-right(auto);
     align-items: center;
+    margin-bottom: 3px;
   }
 
   .advantages__title {
     @include font-color-size($title-font-color, none, $title-font-size-tablet, $weight-regular, 60px);
     width: $tablet-width - (2 * $main-padding-tablet);
     margin-bottom: 38px;
+    margin-top: 13px;
   }
 
   .advantages__list {
@@ -109,7 +111,7 @@
     width: ($tablet-width / 2) - $main-padding-tablet - 30px;
     min-height: 228px;
     margin-top: 35px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     position: relative;
 
     &:nth-child(2n) {
@@ -166,6 +168,7 @@
 @media (min-width: $desktop-width) {
   .advantages {
     @include padding-left-right($main-padding-desktop);
+    margin-bottom: -8px;
   }
 
   .advantages__title {
@@ -179,6 +182,7 @@
 
   .advantages__item {
     width: ($desktop-width - (2 * $main-padding-desktop) - (80px * 3)) / 4;
+    margin-bottom: 36px;
 
     &:nth-child(n) {
       margin-right: 80px;

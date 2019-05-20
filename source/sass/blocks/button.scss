@@ -1,56 +1,99 @@
 .button {
-  @include flex(column, center,center, nowrap);
-  @include size(280px, 40px);
   @include margin-left-right($main-padding-mobile);
   @include link-style;
   @include font-color-size($contrast-font-color, uppercase, $button-font-size, $weight-regular, 20px);
+  display: block;
+  width: 280px;
+  min-height: 40px;
   font-family: $oswald;
   background-color: $main-color;
   border: 0;
   padding: 0;
+  word-wrap: break-word;
+  text-align: center;
 
-  &--preview {
-    margin-top: 5px;
-    font-size: 14px;
-    line-height: 18px;
+  &:hover {
+    background-color: $button-hover-color;
   }
 
-  &--card,
-  &--card-plus {
-    @include margin-left-right(0);
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--preview {
+  @include margin-left-right(0);
+  margin-top: 3px;
+  padding-top: 9px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button--card,
+.button--card-plus {
+  @include margin-left-right(0);
+}
+
+.button--card-plus {
+  background-color: $add-background-color;
+  color: $main-font-color;
+
+  &:hover {
+    background-color: #ebebeb;
   }
 
-  &--card-plus {
-    background-color: $add-background-color;
-    color: $main-font-color;
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
   }
+}
 
-  // &--form {
-  // }
+.button--card-other {
+  margin-top: -3px;
 }
 
 @media (min-width: $tablet-width) {
   .button {
     @include font-color-size($contrast-font-color, uppercase, 16px, $weight-regular, 20px);
-    @include size(245px, 52px);
+    width: 245px;
+    min-height: 52px;
     font-family: $oswald;
     margin-top: 20px;
+  }
 
-    &--card-plus {
-      color: $main-font-color;
-    }
+  .button--card-plus {
+    color: $main-font-color;
   }
 
   .button--preview {
     @include margin-left-right(0);
+    font-size: 20px;
+    padding-top: 16px;
+    padding-left: 0;
   }
 
   .button--card,
   .button--card-plus {
     @include margin-left-right($card-padding-tablet);
     width: 100%;
-    height: 40px;
-    // @include size(249px, 40px);
+    min-height: 40px;
+  }
+
+  .button--card-main,
+  .button--card-plus {
+    width: calc(100% - (#{$card-padding-tablet} * 2));
+  }
+
+  .button--card-other {
+    @include margin-left-right(0);
+    margin-top: -12px;
+    min-width: 100%;
+  }
+
+  .button--form {
+    @include margin-left-right(0);
+    width: 283px;
+    font-size: 20px;
+    margin: 0;
   }
 }
 
@@ -59,13 +102,25 @@
     margin-top: 25px;
   }
 
-  .button--card {
-    @include margin-left-right($card-padding-desktop);
+  .button--card,
+  .button--card-plus {
+    width: calc(100% - 38px * 2);
+  }
+
+  .button--card-main {
+    margin-top: 2px;
   }
 
   .button--card.button--card-other {
+    min-width: 0;
     width: 245px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .button--form {
+    width: 568px;
+    margin-top: 0;
   }
 }

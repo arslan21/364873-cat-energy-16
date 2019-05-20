@@ -1,6 +1,6 @@
 // fonts
-$oswald: "Oswald";
-$arialmt: "Arial MT";
+$oswald: "Oswald", sans-serif;
+$arialmt: "Arial MT", sans-serif;
 
 //font-color
 $main-font-color: #444444;
@@ -15,7 +15,9 @@ $background-color: #ffffff;
 $add-background-color: #f2f2f2;
 $icon-background-color: #666666;
 $main-color: #68b738;
+$button-hover-color: #5eaa2f;
 $border-color: #cdcdcd;
+$slider-background-color: #eaeaea;
 
 // font-size
 $table-font-size: 12px;
@@ -54,3 +56,7 @@ $retina-dppx: 1.5dppx;
 // card-padding
 $card-padding-tablet: 38px;
 $card-padding-desktop: 38px;
+
+// form-sizes
+$radio-size: 30px;
+$radio-size-tablet: 40px;

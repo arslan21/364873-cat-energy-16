@@ -4,78 +4,93 @@
   border-collapse: collapse;
 }
 
+.table--other {
+  margin-top: 12px;
+}
+
+.table__line--other {
+  font-size: 14px;
+  line-height: 1em;
+}
+
 .table__value {
   @include padding-left-right(0);
   text-align: right;
+}
 
-  &--main {
-    min-width: 67px;
-  }
+.table__value--main {
+  min-width: 67px;
+}
 
-  &--other {
-    width: 137px;
-  }
+.table__value--other {
+  width: 137px;
+  margin-top: 11px;
 }
 
 .table__param {
   @include padding-left-right(0);
   text-align: left;
+}
 
-  &--main {
-    min-width: 67px;
-  }
+.table__param--main {
+  min-width: 67px;
+}
 
-  &--other {
-    width: 137px;
-  }
+.table__param--other {
+  width: 137px;
 }
 
 @media (min-width: $tablet-width) {
   .table {
     @include font-color-size($main-font-color, none, $table-font-size-tablet, $weight-regular, 16px);
     @include padding-left-right($card-padding-tablet);
-
-    &--other {
-      width: 50%;
-    }
   }
 
-  .table__line {
-    &--other {
-      width: 50%;
-    }
+  .table--other {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .table__line--other {
+    width: 50%;
+    font-size: 16px;
+    line-height: 1.25em;
   }
 
   .table__param,
   .table__value {
     border-bottom: 1px solid $border-color;
     height: 31px;
+  }
 
-    &--other {
-      border: 0;
-      text-align: right;
-    }
+  .table__param--other,
+  .table__value--other {
+    border: 0;
+    text-align: right;
+  }
 
-    .table__value {
-      &--other {
-        width: 95px;
-      }
-    }
+  .table__value--other {
+    width: 58px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .table {
     @include padding-left-right($card-padding-desktop);
-
-    &--other {
-      width: 285px;
-    }
   }
 
-  .table__param {
-    &--other {
-      text-align: left;
-    }
+  .table--other {
+    width: 288px;
+    margin-top: 6px;
+  }
+
+  .table__param--other {
+    text-align: left;
+  }
+
+  .table__value--other {
+    width: 27px;
+    text-align: center;
   }
 }
