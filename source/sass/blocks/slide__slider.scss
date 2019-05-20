@@ -53,14 +53,19 @@
 
 .slide__slider {
   appearance: none;
+  @include padding-left-right(0);
+
   width: 76px;
   background-color: transparent;
+  height: 12px;
+  border-radius: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .slide__slider::-webkit-slider-thumb {
   @include slider-thumb-mobile;
-  @include margin-left-right(4px);
-  margin-top: 50%;
+  margin-top: 3px;
 }
 
 /* All the same stuff for Firefox */
@@ -75,14 +80,24 @@
 
 .slide__slider::-webkit-slider-runnable-track {
   @include slider-track-mobile;
+  @include padding-left-right(4px);
 }
 
 .slide__slider::-moz-range-track {
   @include slider-track-mobile;
+  @include padding-left-right(4px);
 }
-
+//IE
 .slide__slider::-ms-track {
   @include slider-track-mobile;
+  border: 0;
+  border-radius: 10px;
+  color: transparent;
+  @include padding-left-right(4px);
+
+  // background-color: red;
+  // margin-left: 8px;
+  // padding-right: 8px;
 }
 
 .slide__slider::-moz-range-progress {
@@ -93,10 +108,15 @@
 
 .slide__slider::-ms-fill-lower {
   background: #68b738;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 6px;
+  margin-left: 5px
 }
-
+//IE
 .slide__slider::-ms-fill-upper {
   background: #ffffff;
+  background: blue;
 }
 
 @media (min-width: $tablet-width) {
