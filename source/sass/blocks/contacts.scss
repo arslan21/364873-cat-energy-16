@@ -42,6 +42,7 @@
   overflow: hidden;
   position: relative;
   background-image: url("../../img/bg-map-mobile@1x.png");
+  background-color: $add-background-color;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/bg-map-mobile@2x.png");
