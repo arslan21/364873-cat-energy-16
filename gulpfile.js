@@ -49,7 +49,7 @@ gulp.task("images", function () {
         ]
       })
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img"))
 });
 
 gulp.task("webp", function () {
@@ -129,4 +129,4 @@ gulp.task("sprite", function () {
 
 gulp.task("build", gulp.series("clean", "uglify", "css", "copy"));
 gulp.task("start", gulp.series("build", "server"));
-gulp.task("imagesopimize", gulp.series("images", "webp"));
+gulp.task("imageoptimize", gulp.series("images", "webp"));
