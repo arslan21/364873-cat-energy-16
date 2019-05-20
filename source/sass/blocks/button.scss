@@ -22,11 +22,11 @@
 }
 
 .button--preview {
+  @include margin-left-right(0);
   margin-top: 3px;
   padding-top: 9px;
   font-size: 14px;
   line-height: 18px;
-  @include margin-left-right(0);
 }
 
 .button--card,

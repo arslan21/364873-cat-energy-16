@@ -35,7 +35,6 @@
   justify-content: $justify-content;
   align-items: $align-items;
   flex-wrap: $wrap;
-  /*@include flex (row, flex-start, stretch, nowrap);*/
 }
 
 @mixin link-style {
@@ -60,8 +59,6 @@
 @mixin title-with-line($background-color, $line-color) {
   position: relative;
   background-color: $background-color;
-  // margin: 0;
-  // height: 100%;
 
   &::after {
     position: absolute;
@@ -79,7 +76,6 @@
     padding-left: $main-padding-mobile;
     padding-right: $main-padding-mobile;
     margin: 0;
-    // top: 1.15em;
     left: calc((100% - #{$mobile-width}) / 2);
     background-color: inherit;
     z-index: 2;
@@ -88,11 +84,9 @@
   @media (min-width: $tablet-width) {
     &::after {
       top: 18px;
-      // top: calc(1.85em + 18px);
     }
 
     & > span {
-      // top: 1.85em;
       padding-left: 37px;
       padding-right: 39px;
       left: calc(((100% - #{$tablet-width})/2) + #{$main-padding-tablet});
@@ -101,12 +95,10 @@
 
   @media (min-width: $desktop-width) {
     &::after {
-      // top: calc(2.05em + 18px);
       top: 18px;
     }
 
     & > span {
-      // top: 2.05em;
       left: calc(((100% - #{$desktop-width})/2) + #{$main-padding-desktop} - 37px);
     }
   }
