@@ -80,7 +80,7 @@
 .advantages__description {
   @include font-color-size($main-font-color, none, $main-font-size, $weight-regular, 18px);
   font-family: $arialmt;
-  width: auto;
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   word-wrap: break-word;
