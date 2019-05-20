@@ -1,19 +1,14 @@
 .html {
   background-color: $add-background-color;
-  // background: linear-gradient(180deg, $main-color, $add-background-color)
 }
 
 .body {
   font-family: "Oswald", "Arial", sans-serif;
   box-sizing: border-box;
   margin: 0 auto;
-  // @include padding-left-right($main-padding-mobile);
-
   width: 100%;
   min-width: 320px;
   max-width: 2560px;
-
-  // @include font($font-size-normal, 18px, 300, $main-font-color);
   background-color: $background-color;
 }
 
