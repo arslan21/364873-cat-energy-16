@@ -1,12 +1,11 @@
 .preview {
-  height: 480px;
+  min-height: 480px;
   width: 100%;
   background-color: inherit;
 }
 
 .preview__background {
   background: linear-gradient($main-color 0, $main-color 305px, $background-color 306px, $background-color 480px);
-  height: 100%;
   width: 100%;
 }
 
@@ -15,7 +14,6 @@
   background-position: (50% 0%);
   background-repeat: no-repeat;
   background-size: auto 305px;
-  height: 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/index-background-mobile@2x.jpg");
@@ -23,7 +21,6 @@
 }
 
 .preview__wraper {
-  @include flex(column, space-between, center, nowrap);
   @include margin-left-right(auto);
   padding-top: 3px;
   width: $mobile-width - (2 * $main-padding-mobile);
@@ -34,12 +31,17 @@
   @include font-color-size($contrast-font-color, none, $page-title-size, $weight-regular, 36px);
   font-family: $oswald;
   text-align: center;
+  width: 100%;
+  word-break: break-all;
+  min-height: 1px;
+  margin-bottom: 24px;
 }
 
 .preview__slogan {
   @include font-color-size($contrast-font-color, uppercase, 14px, $weight-regular, 14px);
   text-align: center;
   margin-top: 0;
+  width: 100%;
 }
 
 .preview__image {
@@ -142,6 +144,10 @@
 
   .preview__title {
     margin-left: 78px;
+  }
+
+  .preview__slogan {
+    width: auto;
   }
 
   .preview__slogan,
