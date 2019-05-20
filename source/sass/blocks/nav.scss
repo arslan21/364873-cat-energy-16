@@ -36,6 +36,7 @@
   @include flex(column, center, center, wrap);
   width: 100%;
   min-height: 66px;
+  height: 1px;
   border-bottom: 1px solid $border-color;
   background-color: transparent;
 }
@@ -44,6 +45,7 @@
   @include link-style();
   @include flex(column, center, center, wrap);
   width: 100%;
+  height: 100%;
 
   &:hover {
     opacity: 0.6;
