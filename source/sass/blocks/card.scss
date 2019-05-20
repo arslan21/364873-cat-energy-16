@@ -147,11 +147,15 @@
 
   .card--other {
     @include padding-left-right($card-padding-tablet);
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
     min-height: 140px;
     background-color: $background-color;
     margin-bottom: -1px;
-    padding-bottom: 12px;
+    padding-top: 25px;
+    padding-bottom: 0;
     margin-top: 0;
   }
 
@@ -171,7 +175,8 @@
   }
 
   .card__table {
-    height: auto;
+    min-height: 31px;
+    height: 1px;
     width: calc(100% - 38px * 2);
   }
 
@@ -181,6 +186,7 @@
 
   .card__title {
     @include margin-left-right(38px);
+    min-height: 31px;
     margin-bottom: 20px;
   }
 
@@ -205,11 +211,6 @@
   .card__link,
   .card__title {
     font-size: 20px;
-  }
-
-  .card__button {
-    margin-top: 2px;
-    margin-bottom: 16px;
   }
 
   .card__button--plus {
@@ -264,6 +265,7 @@
     margin-bottom: -1px;
     margin-top: 0;
     padding-bottom: 0;
+    padding-top: 0;
   }
 
   .card__title--main {
@@ -271,7 +273,8 @@
   }
 
   .card__title--other {
-    width: 324px;
+    width: 288px;
+    padding-top: 6px;
   }
 
   .card__title--plus {

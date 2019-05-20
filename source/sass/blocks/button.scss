@@ -84,7 +84,9 @@
   }
 
   .button--card-other {
-    width: 100%;
+    @include margin-left-right(0);
+    margin-top: -12px;
+    min-width: 100%;
   }
 
   .button--form {
@@ -105,10 +107,15 @@
     width: calc(100% - 38px * 2);
   }
 
+  .button--card-main {
+    margin-top: 2px;
+  }
+
   .button--card.button--card-other {
+    min-width: 0;
     width: 245px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-right: 0;
   }
 
