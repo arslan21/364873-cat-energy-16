@@ -88,6 +88,7 @@
   @include font-color-size($contrast-font-color, none, 16px, $weight-regular, 20px);
   font-family: $arialmt;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
