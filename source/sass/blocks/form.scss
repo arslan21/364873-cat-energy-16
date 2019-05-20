@@ -436,7 +436,7 @@
 
 @media (min-width: $desktop-width) {
   .form {
-    @include flex(row, center, stretch, wrap);
+    @include flex(row, flex-start, stretch, wrap);
   }
 
   .form__registration,
