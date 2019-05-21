@@ -82,8 +82,10 @@
   }
 }
 
-.catalog__bonus img {
+.catalog__bonus-image {
   margin-bottom: 46px;
+  width: 55px;
+  height: 60px;
 }
 
 .catalog__bonus-slogan {
@@ -139,7 +141,7 @@
     }
   }
 
-  .catalog__bonus img {
+  .catalog__bonus-image {
     margin-top: 16px;
   }
 
@@ -211,7 +213,7 @@
     }
   }
 
-  .catalog__bonus img {
+  .catalog__bonus-image {
     margin-bottom: 64px;
     margin-top: 0;
   }
