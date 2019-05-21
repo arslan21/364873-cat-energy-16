@@ -8,7 +8,6 @@ var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 
 var imagemin = require("gulp-imagemin");
@@ -42,12 +41,6 @@ gulp.task("images", function () {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
     ]))
     .pipe(gulp.dest("source/img"))
 });
