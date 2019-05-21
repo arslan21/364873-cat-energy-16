@@ -23,7 +23,7 @@
   padding-bottom: 22px;
 }
 
-.categorie__image {
+.categorie__image-block {
   @include size(50px, 50px);
   position: relative;
   margin-right: 20px;
@@ -39,30 +39,26 @@
     height: 100%;
     background-color: $main-color;
     border-radius: 50%;
+    left: 0;
+    top: 0;
+    z-index: 0;
   }
 }
 
-.categorie__image--weight-down::before,
-.categorie__image--weight-up::before {
+.categorie__image--slim,
+.categorie__image--pro {
   position: absolute;
-  content: "";
-  display: block;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-size: content;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.categorie__image--weight-down::before {
+.categorie__image--slim {
   @include size(50px, 49px);
-  background-image: url("../../img/icon-cat-slim.svg");
 }
 
-.categorie__image--weight-up::before {
+.categorie__image--pro {
   @include size(67px, 50px);
-  background-image: url("../../img/icon-cat-pro.svg");
 }
 
 .categorie__name {
@@ -167,7 +163,7 @@
     }
   }
 
-  .categorie__image {
+  .categorie__image-block {
     @include size(200px, 200px);
     order: 1;
     margin-left: auto;
@@ -175,12 +171,12 @@
     margin-top: 89px;
   }
 
-  .categorie__image--weight-down::before {
+  .categorie__image--slim {
     @include size(140px, 194px);
     transform: translate(-50%, -58%);
   }
 
-  .categorie__image--weight-up::before {
+  .categorie__image--pro {
     @include size(268px, 112px);
   }
 }
@@ -204,9 +200,9 @@
     padding-bottom: 62px;
   }
 
-  .categorie__image {
+  .categorie__image-block {
     @include size(100px, 100px);
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle r="50" cx="50%25" cy="50%25" fill="%2368b738"%3E%3C/circle%3E/%3E%3C/svg%3E');
+    // background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle r="50" cx="50%25" cy="50%25" fill="%2368b738"%3E%3C/circle%3E/%3E%3C/svg%3E');
     order: 0;
     margin-left: 0;
     margin-top: 45px;
@@ -214,11 +210,11 @@
     margin-right: 60px;
   }
 
-  .categorie__image--weight-down::before {
+  .categorie__image--slim {
     @include size(70px, 97px);
   }
 
-  .categorie__image--weight-up::before {
+  .categorie__image--pro {
     @include size(134px, 56px);
   }
 
