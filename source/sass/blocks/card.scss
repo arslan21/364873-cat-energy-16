@@ -48,6 +48,8 @@
 
 .card__title--other {
   height: 29px;
+  margin-top: 11px;
+  margin-bottom: 0px;
 }
 
 .card__title--plus {
@@ -94,7 +96,6 @@
 
 .card__table--other {
   width: 100%;
-  margin-bottom: 16px;
 }
 
 .card__add-icon {
@@ -110,10 +111,6 @@
 
 .card__button--plus {
   margin-top: 10px;
-}
-
-.button--card-other {
-  margin-top: -3px;
 }
 
 .card__br--tablet {

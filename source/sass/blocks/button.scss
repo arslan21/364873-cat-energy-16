@@ -60,10 +60,6 @@
     margin-top: 20px;
   }
 
-  .button--card-plus {
-    color: $main-font-color;
-  }
-
   .button--preview {
     @include margin-left-right(0);
     font-size: 20px;
@@ -83,9 +79,17 @@
     width: calc(100% - (#{$card-padding-tablet} * 2));
   }
 
+  .button--card-plus {
+    color: $main-font-color;
+  }
+
+  .button--card-main {
+    margin-top: 0;
+  }
+
   .button--card-other {
     @include margin-left-right(0);
-    margin-top: -12px;
+    margin-top: -9px;
     min-width: 100%;
   }
 
@@ -111,7 +115,7 @@
     margin-top: 2px;
   }
 
-  .button--card.button--card-other {
+  .button--card-other {
     min-width: 0;
     width: 245px;
     margin-top: 0;
