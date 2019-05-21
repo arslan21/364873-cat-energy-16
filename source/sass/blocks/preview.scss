@@ -32,7 +32,7 @@
   font-family: $oswald;
   text-align: center;
   width: 100%;
-  word-break: break-all;
+  word-break: break-word;
   min-height: 1px;
   margin-bottom: 24px;
 }
@@ -92,7 +92,8 @@
     font-size: 20px;
     color: $title-font-color;
     margin-left: 87px;
-    margin-top: 5px;
+    margin-top: 21px;
+    width: auto;
     margin-bottom: 30px;
   }
 
