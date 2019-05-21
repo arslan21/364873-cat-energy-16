@@ -382,6 +382,7 @@
   .form__label--radio {
     padding-left: $radio-size-tablet + 28px + 20px;
     height: 40px;
+    width: 100%;
 
     &::before {
       @include size($radio-size-tablet, $radio-size-tablet);
