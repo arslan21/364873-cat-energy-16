@@ -94,7 +94,7 @@
     left: 100%;
     bottom: 25%;
     margin-left: 12px;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     width: 24px;
     height: 11px;
@@ -102,7 +102,7 @@
 
   &:hover::after {
     width: 33px;
-    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
   &:active,
