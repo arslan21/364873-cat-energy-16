@@ -23,7 +23,7 @@
   background-color: inherit;
 }
 
-.catalog__part-wraper--other {
+.catalog__part-wraper {
   @include flex(column, flex-start, center, nowrap);
   width: 100%;
 }
@@ -181,7 +181,7 @@
     padding-top: 31px;
   }
 
-  .catalog__part-wraper--other {
+  .catalog__part-wraper {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
