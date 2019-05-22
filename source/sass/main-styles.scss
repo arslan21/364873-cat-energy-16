@@ -23,6 +23,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .html {
+    overflow-x: hidden;
+  }
+
   .html,
   .body {
     min-width: $tablet-width;
