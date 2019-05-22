@@ -12,14 +12,13 @@
 
   &:hover p {
     color: $main-color;
-
   }
 
   &:active,
   &:active svg,
   &:active p,
-  & p:active,//for IE
-  & svg:active { //for IE
+  & p:active,
+  & svg:active {
     opacity: 0.3;
   }
 }

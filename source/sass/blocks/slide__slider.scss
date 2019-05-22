@@ -77,7 +77,6 @@
 /* All the same stuff for Webkit */
 .slide__slider::-webkit-slider-thumb {
   @include slider-thumb-mobile;
-  -webkit-appearance: none;
   box-shadow: -103px 0 0 100px $main-color;
 }
 
@@ -109,16 +108,17 @@
 .slide__slider::-ms-fill-lower {
   background: $main-color;
 }
+
 ::-ms-ticks-after {
-    display: none;
+  display: none;
 }
 
 ::-ms-ticks-before {
-    display: none;
+  display: none;
 }
 
 ::-ms-tooltip {
-    display: none;
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
