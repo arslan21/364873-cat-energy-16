@@ -162,6 +162,11 @@
   border-radius: 50%;
 }
 
+.form__input:invalid {
+  border: 1px solid red;
+  outline: none;
+}
+
 .form__input--radio:checked + .form__label--radio::after {
   @include size(0.4 * $radio-size, 0.4 * $radio-size);
   border-radius: 50%;
@@ -216,6 +221,7 @@
   cursor: text;
   border: 1px solid $border-color;
   opacity: 0.5;
+  outline: none;
 
   &:hover {
     opacity: 1;
