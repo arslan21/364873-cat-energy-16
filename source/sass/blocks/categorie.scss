@@ -86,6 +86,7 @@
   max-width: calc(100% - 14px - 24px - 36px);
   word-wrap: break-word;
   margin-left: -2px;
+  opacity: 0.9999; //for IE
 
   &::after {
     content: "";

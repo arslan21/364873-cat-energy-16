@@ -63,6 +63,7 @@
 .card__title {
   @include font-color-size($title-font-color, uppercase, $card-title-font-size, $weight-regular, 20px);
   @include link-style;
+  opacity: 0.9999; //for IE
 
   &:hover,
   &:focus {

@@ -46,14 +46,20 @@
   @include flex(column, center, center, wrap);
   width: 100%;
   height: 100%;
+  opacity: 0.9999; //for IE
 
   &:hover {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active  {
     opacity: 0.3;
   }
+}
+
+//for IE
+.nav__link-text:active  {
+  opacity: 0.3;
 }
 
 .nav__link-text {

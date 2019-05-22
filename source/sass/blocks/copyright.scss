@@ -4,6 +4,7 @@
 
 .copyright__link {
   @include link-style;
+  opacity: 0.9999; //for IE
 
   &:hover svg {
     fill: $main-color;
@@ -11,9 +12,14 @@
 
   &:hover p {
     color: $main-color;
+
   }
 
-  &:active {
+  &:active,
+  &:active svg,
+  &:active p,
+  & p:active,//for IE
+  & svg:active { //for IE
     opacity: 0.3;
   }
 }
