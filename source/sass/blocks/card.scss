@@ -146,6 +146,7 @@
     @include padding-left-right($card-padding-tablet);
     flex-direction: row;
     align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
     min-height: 140px;
@@ -255,6 +256,7 @@
     @include padding-left-right(0);
     width: 895px;
     min-height: 73px;
+    height: 1px;
     background-color: $background-color;
     border: 0;
     border-top: 1px solid $border-color;
