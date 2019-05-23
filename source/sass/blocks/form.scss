@@ -188,7 +188,7 @@
 
 .form__input--radio,
 .form__input--checkbox {
-  display: none;
+  @include visualy-hidden;
 }
 
 .form__label--email,
