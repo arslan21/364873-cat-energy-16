@@ -169,6 +169,7 @@
 .form__input:invalid {
   border: 1px solid red;
   outline: none;
+  box-shadow: none;
 }
 
 .form__input--radio:checked + .form__label--radio::after {
