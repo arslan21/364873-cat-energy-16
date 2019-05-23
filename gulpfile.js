@@ -22,6 +22,8 @@ var replace = require('gulp-replace');
 
 var inject = require('gulp-inject');
 
+var htmlmin = require('gulp-htmlmin');
+
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -32,7 +34,7 @@ gulp.task("css", function () {
     .pipe(rename("style-min.css"))
     .pipe(postcss([ autoprefixer() ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -78,8 +80,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/css/**",
     "source/*.{ico,png}",
     "source/*.json",
   ], {
@@ -119,14 +119,12 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("source"));
 });
 
-gulp.task("build", gulp.series("clean", "uglify", "css", "copy"));
-var htmlmin = require('gulp-htmlmin');
-
 gulp.task('htmlmin', function () {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 });
 
+gulp.task("build", gulp.series("clean", "copy", "css", "uglify", "htmlmin"));
 gulp.task("start", gulp.series("build", "server"));
 gulp.task("imageoptimize", gulp.series("images", "webp"));
