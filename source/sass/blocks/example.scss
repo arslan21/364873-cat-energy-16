@@ -179,10 +179,10 @@
   }
 
   .example__background__desk {
-    background: linear-gradient(90deg, $add-background-color 72.57%, $slider-background-color 72.57%);
+    background: linear-gradient(90deg, $add-background-color $slider-background, $slider-background-color $slider-background);
     position: absolute;
     width: 100%;
-    height: 462px;
+    height: 100%;
     top: 192px;
     left: 0;
   }
@@ -198,6 +198,7 @@
     width: 450px;
     display: block;
     padding-top: 18px;
+    padding-bottom: 70px;
   }
 
   .example__title {

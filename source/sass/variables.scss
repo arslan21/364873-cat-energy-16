@@ -60,3 +60,6 @@ $card-padding-desktop: 38px;
 // form-sizes
 $radio-size: 30px;
 $radio-size-tablet: 40px;
+
+//$slider-background
+$slider-background: calc(((100% - #{$desktop-width}) / 2) + 721px + (650px * 50 / 100)); //721px - положение блока с картинками; 650px - ширина блока с картинками; 50 - значение inputa
