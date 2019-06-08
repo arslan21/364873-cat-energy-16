@@ -15,3 +15,11 @@ navToggle.addEventListener('click', function() {
     nav.classList.remove('nav--opened');
   }
 });
+
+function rangeSlider() {
+  var slider = document.querySelector('.slide__slider');
+  var slideBefore = document.querySelector('.slide__before');
+  console.log(slider.value);
+  slideBefore.style.width = slider.value + '%';
+  console.log(slideBefore.style.width);
+}
